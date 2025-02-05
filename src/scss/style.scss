@@ -1,8 +1,12 @@
 @use 'custom';
+@use 'abstracts';
 @use 'base';
+@use 'components';
 @use 'pages';
 
 // CSS PROPERTIES GOES HERE
-
+.container{
+    max-width: 80.5%;
+}
 
 

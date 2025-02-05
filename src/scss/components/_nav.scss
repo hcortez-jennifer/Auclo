@@ -1,0 +1,47 @@
+@use '../abstracts' as a;
+
+.header__discount__banner p{
+    background-color: var(--test3);
+    padding-block: .25em;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 0.875rem;
+}
+
+.navbar-brand{
+    font-family: 'Uncage Medium';
+}
+
+.navbar-collapse{
+    .navbar-nav{
+        &:nth-of-type(1){
+            .nav-item{
+                margin-inline: .5em;
+
+                .nav-link{
+                    position: relative;
+
+                    &::after{
+                        @include a.underlineEffect(0, 2px);
+                    }
+
+                    &:hover::after, &.active::after{
+                        width: 100%;
+                    }
+
+                    .bxs-down-arrow{
+                        font-size: 0.75rem;
+                    }
+                }
+            }
+        }
+    }
+} 
+
+.navbar-collapse .navbar-nav:nth-of-type(2) .bx{
+    font-size: 1.125rem;
+}
+
+.nav-link .badge{
+    background-color: var(--primary-clr);
+}
