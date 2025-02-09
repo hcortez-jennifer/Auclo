@@ -9,4 +9,14 @@
     max-width: 80.5%;
 }
 
+@media (max-width: 991px) {
+    .container{
+        max-width: 90%;
+    }
+}
 
+@media (max-width: 565px) {
+    .container{
+        max-width: 100%;
+    }
+}

@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Baskervville:ital@0;1&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=DM+Serif+Text:ital@0;1&family=Forum&family=Gilda+Display&family=Ibarra+Real+Nova:ital,wght@0,400..700;1,400..700&family=Lusitana:wght@400;700&family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&family=Ovo&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Shippori+Mincho+B1:wght@400;500;600;700;800&family=Shippori+Mincho:wght@400;500;600;700;800&family=Suranna&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova:ital,wght@0,400..700;1,400..700&family=Manrope:wght@200..800&display=swap");
 /*!
  * Bootstrap  v5.3.3 (https://getbootstrap.com/)
  * Copyright 2011-2024 The Bootstrap Authors
@@ -72,7 +72,7 @@
   --bs-dark-border-subtle: #adb5bd;
   --bs-white-rgb: 255, 255, 255;
   --bs-black-rgb: 0, 0, 0;
-  --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --bs-font-sans-serif: "Manrope";
   --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
   --bs-body-font-family: var(--bs-font-sans-serif);
@@ -11848,9 +11848,9 @@ textarea.form-control-lg {
 :root {
   --primary-clr: #b68d40;
   --secondary-clr: #f4ebd0;
-  --black-clr: #333;
+  --black-clr: #141414;
   --grey-clr: #777575;
-  --white-clr: #f8f8ff;
+  --white-clr: #d3d3da;
   --test1: #1F494F;
   --test2: #BB9877;
   --test3: #E3D9D0;
@@ -11860,31 +11860,22 @@ textarea.form-control-lg {
   --test7: #d1b483;
   --test8: #3a4d3e;
   --test9: #8ea482;
-  --test10: #f4e9df;
+  --test10: #b4e49a;
+  --test11: #f4e9df;
 }
 
-@font-face {
-  font-family: "Uncage Regular";
-  src: url("/assets/font/UNCAGE-Regular.otf");
-}
-@font-face {
-  font-family: "Uncage Medium";
-  src: url("/assets/font/UNCAGE-Medium.otf");
-}
-@font-face {
-  font-family: "Uncage Bold";
-  src: url("/assets/font/UNCAGE-Bold.otf");
-}
-.header__discount__banner p {
-  background-color: var(--test3);
-  padding-block: 0.25em;
-  text-transform: uppercase;
-  font-weight: 700;
-  font-size: 0.875rem;
+.navbar {
+  background-color: var(--black-clr);
 }
 
 .navbar-brand {
-  font-family: "Uncage Medium";
+  font-family: "Ibarra Real Nova", serif;
+  color: var(--white-clr);
+  font-size: 1.5rem;
+}
+
+.navbar-brand:hover {
+  color: var(--white-clr);
 }
 
 .navbar-collapse .navbar-nav:nth-of-type(1) .nav-item {
@@ -11892,6 +11883,7 @@ textarea.form-control-lg {
 }
 .navbar-collapse .navbar-nav:nth-of-type(1) .nav-item .nav-link {
   position: relative;
+  color: var(--white-clr);
 }
 .navbar-collapse .navbar-nav:nth-of-type(1) .nav-item .nav-link::after {
   content: " ";
@@ -11914,42 +11906,66 @@ textarea.form-control-lg {
   font-size: 1.125rem;
 }
 
+.nav-link i {
+  color: var(--white-clr);
+}
+
 .nav-link .badge {
   background-color: var(--primary-clr);
 }
 
+@media (max-width: 991px) {
+  .navbar-toggler {
+    color: transparent;
+    border: none;
+  }
+  .navbar-toggler .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(211, 211, 218, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+  }
+  .icon-link {
+    margin-inline: 0.5em;
+  }
+  .navbar-collapse {
+    margin-block: 2em 1em;
+  }
+  .dropdown-menu {
+    background-color: var(--black-clr);
+    border: none;
+  }
+  .dropdown-menu .dropdown-item {
+    color: var(--grey-clr);
+  }
+}
 .hero {
   width: 100%;
-  height: 90vh;
+  height: 100vh;
   background-image: url("/assets/img/hero_bg.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: left 50%;
-}
-
-.hero {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.hero__container {
+  margin-top: 3em;
 }
 
 .hero__content {
   max-width: 50%;
   color: white;
 }
-
 .hero__content h1 {
   font-family: "Ibarra Real Nova", serif;
   font-size: 5rem;
   line-height: 1.2;
   margin-bottom: 0.3em;
 }
-
 .hero__content .hero__cta {
   position: relative;
   display: inline-block;
   margin-top: 3em;
-  text-decoration: none;
   font-weight: 600;
   color: var(--white-clr);
   background-color: black;
@@ -11974,8 +11990,23 @@ textarea.form-control-lg {
   width: 60%;
 }
 
+.hero {
+  margin-bottom: 10em;
+}
+
 .container {
   max-width: 80.5%;
+}
+
+@media (max-width: 991px) {
+  .container {
+    max-width: 90%;
+  }
+}
+@media (max-width: 565px) {
+  .container {
+    max-width: 100%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

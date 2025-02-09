@@ -10,33 +10,37 @@
 </head>
 <body>
     <header>
-        <div class="header__discount__banner">
-            <p class="text-center mb-0">80% off your first purchase</p>
-        </div>
-
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <nav class="navbar navbar-expand-lg fixed-top">
             <div class="container">
-                <a href="index.html" class="navbar-brand">Auclo</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <!-- ========== MOBILE Menu ==========-->
+                <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-
+                <a href="index.html" class="navbar-brand">Auclo</a>
+                <div class="navbar-icons d-lg-none">
+                    <a href="#" class="nav-link icon-link"><i class='bx bx-search'></i></a>
+                    <a href="#" class="nav-link icon-link position-relative">
+                        <i class='bx bx-shopping-bag'></i>
+                        <span class="badge position-absolute translate-middle rounded-pill">0</span>
+                    </a>     
+                </div>
+    
+                <!-- ========== DESKTOP MENU ==========-->
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav mx-auto">
                         <li class="nav-item"><a href="index.html" class="nav-link active">Home</a></li>
-
                         <li class="nav-item dropdown">
-                            <a href="#" class="nav-link">Collections <i class='bx bxs-down-arrow'></i></a>
+                            <a href="#" class="nav-link" data-bs-toggle="dropdown">Watches <i class='bx bxs-down-arrow'></i></a>
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" href="#">New Arrivals</a></li>
                                 <li><a class="dropdown-item" href="#">Best Sellers</a></li>
-                                <li><a class="dropdown-item" href="#">Women's watches</a></li>
-                                <li><a class="dropdown-item" href="#">Men's watches</a></li>
+                                <li><a class="dropdown-item" href="#">Women's Watches</a></li>
+                                <li><a class="dropdown-item" href="#">Men's Watches</a></li>
                                 <li><a class="dropdown-item" href="#">View All</a></li>
                             </ul>
                         </li>
                         <li class="nav-item dropdown">
-                            <a href="#" class="nav-link">Watches <i class='bx bxs-down-arrow'></i></a>
+                            <a href="#" class="nav-link" data-bs-toggle="dropdown">Collections <i class='bx bxs-down-arrow'></i></a>
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" href="#">Eterna Collection</a></li>
                                 <li><a class="dropdown-item" href="#">AeroTech Collection</a></li>
@@ -46,29 +50,30 @@
                             </ul>
                         </li>
                         <li class="nav-item"><a href="#" class="nav-link">Straps</a></li>
-                    </ul>
-                    <ul class="navbar-nav">
-                        <li class="nav-item"><a href="#" class="nav-link"><i class='bx bx-search'></i></a></li>
-                        <li class="nav-item"><a href="#" class="nav-link"><i class='bx bx-heart'></i></a></li>
-                        <li class="nav-item position-relative">
-                            <a href="#" class="nav-link">
-                                <i class='bx bx-shopping-bag'></i>
-                                <span class="badge position-absolute translate-middle rounded-pill">0</span>
-                            </a>
-                        </li>
-                        <li class="nav-item"><a href="#" class="nav-link"><i class='bx bxs-user'></i></a></li>
+                        <li class="nav-item d-lg-none"><a href="#" class="nav-link">Sign In</a></li>
+                        <li class="nav-item d-lg-none"><a href="#" class="nav-link">Log In</a></li>
                     </ul>
                 </div>
+                <ul class="navbar-nav d-none d-lg-flex">
+                    <li class="nav-item"><a href="#" class="nav-link"><i class='bx bx-search'></i></a></li>
+                    <li class="nav-item position-relative">
+                        <a href="#" class="nav-link">
+                            <i class='bx bx-shopping-bag'></i>
+                            <span class="badge position-absolute translate-middle rounded-pill">0</span>
+                        </a>
+                    </li>
+                    <li class="nav-item"><a href="#" class="nav-link"><i class='bx bx-heart'></i></a></li>
+                    <li class="nav-item"><a href="#" class="nav-link"><i class='bx bx-user'></i></a></li>
+                </ul>
             </div>
         </nav>
     </header>
-
     <section class="hero">
         <div class="hero__container container">
             <div class="hero__content">
-                <h1>Time is More Than Seconds—It’s a Legacy</h1>
+                <h1>Time is More Than Seconds— <span class="green-clr">It’s a Legacy</span></h1>
                 <p>Introducing the ChronoX Collection, a fusion of craftsmanship, innovation, and timeless elegance.</p>
-                <a href="#" class="hero__cta">Shop Now</a>
+                <a href="#" class="hero__cta text-decoration-none">Shop Now</a>
             </div>
         </div>
     </section>
@@ -78,7 +83,7 @@
 
 
 
-
+ 
 
 
 
@@ -88,5 +93,6 @@
 
     
     <script src="src/js/index.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
