@@ -1,17 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Baskervville:ital@0;1&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=DM+Serif+Text:ital@0;1&family=Forum&family=Gilda+Display&family=Ibarra+Real+Nova:ital,wght@0,400..700;1,400..700&family=Lusitana:wght@400;700&family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&family=Ovo&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Shippori+Mincho+B1:wght@400;500;600;700;800&family=Shippori+Mincho:wght@400;500;600;700;800&family=Suranna&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova:ital,wght@0,400..700;1,400..700&family=Manrope:wght@200..800&display=swap');
 
-
-@font-face {
-    font-family: 'Uncage Regular';
-    src: url('/assets/font/UNCAGE-Regular.otf');
-}
-
-@font-face {
-    font-family: 'Uncage Medium';
-    src: url('/assets/font/UNCAGE-Medium.otf');
-}
-
-@font-face {
-    font-family: 'Uncage Bold';
-    src: url('/assets/font/UNCAGE-Bold.otf');
+h1{
+    font-size: clamp(2.5rem, 5vw, 5rem);
 }
