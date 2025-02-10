@@ -2,16 +2,25 @@
 
 .navbar{
     background-color: var(--black-clr);
+
+    &.navbar__scrolled{
+        background-color: white;
+        transition: .5s ease-in;
+    }
 }
 
 .navbar-brand{
     font-family: "Ibarra Real Nova", serif;
     color: var(--white-clr);
     font-size: 1.5rem;
-}
 
-.navbar-brand:hover{
-    color: var(--white-clr);
+    &:hover{
+        color: var(--white-clr);
+    }
+
+    &.navbar-brand__scrolled{
+        color: var(--black-clr);
+    }
 }
 
 .navbar-collapse{
@@ -35,6 +44,10 @@
                     .bxs-down-arrow{
                         font-size: 0.75rem;
                     }
+
+                    &.nav-links__scrolled{
+                        color: var(--black-clr);
+                    }
                 }
             }
         }
@@ -47,6 +60,10 @@
 
 .nav-link i{
     color: var(--white-clr);
+
+    &.nav-icons__scrolled{
+        color: var(--black-clr);
+    }
 }
 
 .nav-link .badge{
@@ -61,6 +78,10 @@
 
         .navbar-toggler-icon{
             background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(211, 211, 218, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+
+            &.navbar-toggler-icon__scrolled{
+                background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(20, 20, 20, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+            }
         }
     }
 
@@ -75,6 +96,10 @@
     .dropdown-menu{
         background-color: var(--black-clr);
         border: none;
+
+        &.dropdown-menu__scrolled{
+            background-color: white;
+        }
 
         .dropdown-item{
             color: var(--grey-clr);
