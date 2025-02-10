@@ -1,0 +1,18 @@
+// CENTER PAGE
+@mixin centerPage{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+// UNDERLINE EFFECT 
+@mixin underlineEffect($left: 0, $bottom: 2px) {
+    content: " ";
+    position: absolute;
+    background-color: var(--primary-clr);
+    height: 2px;
+    width: 0%;
+    left: $left;
+    bottom: $bottom;
+    transition: width .3s ease-in-out;
+}
