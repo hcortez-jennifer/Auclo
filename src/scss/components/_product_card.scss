@@ -1,0 +1,55 @@
+.product__card{
+    width: 350px;
+    height: 100%;
+    border-radius: 12px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    margin-inline: .55em;
+    margin-bottom: 1em;
+
+    .product__card__img{
+        background-color: var(--secondary-clr);
+        border-top-left-radius: 12px;
+        border-top-right-radius: 12px;
+        padding-block: 2em;
+        overflow: hidden;
+    }
+
+    img{
+        width: 230px;
+        height: 330px;
+        object-fit: cover;
+        transition: transform .7s ease;
+    }
+
+    &:hover img {
+        transform: scale(1.1);
+    }
+}
+
+.product__card__body{
+    padding: 1em 1em 2em;
+
+    h4{
+        font-family: "Ibarra Real Nova", serif;
+        font-weight: 700;
+    }
+
+    &>p{
+        color: var(--grey-clr);
+    }
+
+    .bx-shopping-bag{
+        background-color: var(--black-clr);
+        color: var(--white-clr);
+        font-size: 1.3rem;
+        padding: .5em .5em;
+        cursor: pointer;
+        transition: all .7s ease;
+        
+        &:hover{
+            background-color: transparent;
+            color: var(--black-clr);
+            border: 1.5px solid var(--black-clr);
+        }
+    }
+}
