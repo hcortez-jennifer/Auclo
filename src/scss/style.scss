@@ -4,7 +4,7 @@
 @use 'components';
 @use 'pages';
 
-// MEDIA QUERIES
+// UNIVERSAL STYLES
 .container{
     max-width: 80.5%;
 
@@ -12,3 +12,20 @@
         max-width: 100%;
     }
 }
+
+section:not(.hero, .product__list){
+    margin-top: 7em;
+}
+
+.header{
+    margin-bottom: 3em;
+
+    hr{
+        background-color: black;
+        width: 20%;
+        height: 2px;
+        margin: .55em auto;
+        opacity: 1;
+    }
+}
+
