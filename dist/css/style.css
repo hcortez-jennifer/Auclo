@@ -12015,7 +12015,7 @@ h2 {
 .hero {
   width: 100%;
   height: 100vh;
-  background-image: url("/assets/img/hero_bg.png");
+  background-image: url("../../assets/img/hero_bg.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: left 50%;
@@ -12140,6 +12140,50 @@ h2 {
   transition: width 0.3s ease-in-out;
 }
 .categories .category__card .categories__cta:hover::after {
+  width: 60%;
+}
+
+.about {
+  background-color: var(--black-clr);
+}
+
+.about__info {
+  position: absolute;
+  width: 35%;
+  top: 50%;
+  left: 10%;
+  color: var(--white-clr);
+}
+.about__info h2 {
+  color: var(--primary-dark-clr);
+  margin-bottom: 0.5em;
+}
+.about__info .about__cta {
+  position: relative;
+  display: inline-block;
+  margin-top: 3em;
+  padding: 1em 2em;
+  font-weight: 600;
+  color: white;
+  background-color: black;
+  border: 1.5px solid var(--primary-dark-clr);
+  border-radius: 5px;
+  transition: background-color 0.7s ease;
+}
+.about__info .about__cta:hover {
+  background-color: transparent;
+}
+.about__info .about__cta::after {
+  content: " ";
+  position: absolute;
+  background-color: var(--primary-dark-clr);
+  height: 2px;
+  width: 0%;
+  left: 25px;
+  bottom: 10px;
+  transition: width 0.3s ease-in-out;
+}
+.about__info .about__cta:hover::after {
   width: 60%;
 }
 
