@@ -1,4 +1,5 @@
 .product__card{
+    position: relative;
     width: 350px;
     height: 100%;
     border-radius: 12px;
@@ -27,7 +28,7 @@
 }
 
 .product__card__body{
-    padding: 1em 1em 2em;
+    padding: 1em 1em 2em; 
 
     h4{
         font-family: "Ibarra Real Nova", serif;
@@ -53,3 +54,75 @@
         }
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+// .product__card {
+//     width: 100%;
+//     border-radius: 12px;
+//     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+//     overflow: hidden;
+//     position: relative;
+//     transition: transform 0.3s ease-in-out;
+
+//     &:hover {
+//         transform: scale(1.03); 
+
+//         .product__card__icons {
+//             opacity: 1;
+//             right: 10px; 
+//         }
+//     }
+
+//     .product__card__img {
+//         background-color: var(--secondary-clr);
+//         padding-block: 2em;
+//         overflow: hidden;
+//         position: relative;
+//         text-align: center;
+//     }
+
+//     img {
+//         width: 230px;
+//         height: 330px;
+//         object-fit: cover;
+//     }
+
+//     .product__card__icons {
+//         position: absolute;
+//         top: 50%;
+//         right: -50px; 
+//         transform: translateY(-50%);
+//         display: flex;
+//         flex-direction: column;
+//         gap: 10px;
+//         opacity: 0;
+//         transition: all 0.4s ease-in-out;
+//     }
+
+//     .product__card__icons a {
+//         background: var(--black-clr);
+//         color: var(--white-clr);
+//         padding: 8px;
+//         border-radius: 50%;
+//         transition: all 0.3s ease;
+
+//         &:hover {
+//             background: var(--primary-clr);
+//             transform: scale(1.1);
+//         }
+//     }
+
+//     .product__card__body {
+//         padding: 1em;
+//         text-align: center;
+//     }
+// }

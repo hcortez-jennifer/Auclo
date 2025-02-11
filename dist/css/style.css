@@ -11964,6 +11964,7 @@ h2 {
   }
 }
 .product__card {
+  position: relative;
   width: 350px;
   height: 100%;
   border-radius: 12px;
