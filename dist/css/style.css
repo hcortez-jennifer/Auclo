@@ -12234,6 +12234,21 @@ h2 {
   padding-bottom: 1rem;
 }
 
+@media (max-width: 767px) {
+  .customization__content {
+    flex-direction: column-reverse;
+  }
+}
+.customization__content .customization__details .cta {
+  margin-top: 2em;
+}
+.customization__content .customization__details .cta:hover {
+  color: var(--black-clr);
+}
+.customization__content img {
+  border-radius: 12px;
+}
+
 .container {
   max-width: 80.5%;
   margin: 0 auto;
