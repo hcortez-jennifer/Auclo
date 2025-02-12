@@ -7,6 +7,7 @@
 // UNIVERSAL STYLES
 .container{
     max-width: 80.5%;
+    margin: 0 auto;
 
     @media (max-width: 565px) {
         max-width: 100%;
@@ -29,3 +30,6 @@ section:not(.hero, .product__list){
     }
 }
 
+i{
+    font-size: 1.3rem;
+}

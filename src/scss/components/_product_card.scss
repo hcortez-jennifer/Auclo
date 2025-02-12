@@ -1,12 +1,19 @@
+@use '../abstracts' as a;
+
 .product__card{
     position: relative;
-    width: 350px;
+    width: 100%;
+    max-width: 350px;
     height: 100%;
     border-radius: 12px;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
     margin-inline: .55em;
     margin-bottom: 1em;
     overflow: hidden;
+
+    @media (max-width: 767px) {
+        max-width: 340px;
+    }
 
     .product__card__img{
         background-color: var(--secondary-clr);
@@ -43,14 +50,13 @@
         font-weight: 700;
     }
 
-    &>p{
+    .product__card__body__details{
         color: var(--grey-clr);
     }
 
     .bx-shopping-bag{
         background-color: var(--black-clr);
         color: var(--white-clr);
-        font-size: 1.3rem;
         padding: .5em .5em;
         cursor: pointer;
         transition: all .7s ease;
@@ -75,14 +81,13 @@
     transition: all 0.4s ease-in-out;
 }
 
-
-
 .product__card__icons a{
-    font-size: 1.3rem;
+    width: 40px;
+    height: 40px;
+    @include a.centerPage;
+    border-radius: 50%;
     background: var(--black-clr);
     color: var(--white-clr);
-    padding: 0.375em;
-    border-radius: 100%;
     transition: all 0.3s ease;
     
     &:hover{

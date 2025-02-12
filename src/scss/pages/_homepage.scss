@@ -47,21 +47,7 @@
         margin-bottom: .3em;
     }
 
-    .hero__cta{
-        @include a.ctaButton;
-
-        &:hover{
-            background-color: transparent;
-        }
-
-        &::after{
-             @include a.underlineEffect(25px, 10px)
-        }
-
-        &:hover::after{
-            width: 60%;
-        }
-
+    .cta{
         @media (max-width: 565px) {
             margin-top: 1em;  
         }
@@ -70,7 +56,7 @@
 
 // ========== CATEGORIES SECTION ==========
 .categories{
-    height: 80vh;
+    min-height: 80vh;
 
     .category__card{
         position: relative;
@@ -107,55 +93,58 @@
 }
 
 // ========== ABOUT SECTION ==========
-.about{
+.about {
     background-color: var(--black-clr);
-}
 
-.about__info{
-    position: absolute;
-    width: 35%;
-    top: 50%;
-    left: 10%;
-    color: var(--white-clr);
-
-    h2{
-        color: var(--primary-dark-clr);
-        margin-bottom: .5em;
+    .about__content {
+        @include a.centerPage;
+        flex-direction: column; 
+        position: relative;
     }
 
-    .about__cta{
-        @include a.ctaButton;
-
-        &:hover{
-            background-color: transparent;
+    .about__info {
+        position: absolute;
+        width: 40%;
+        top: 50%;
+        left: 10%;
+        transform: translateY(-50%);
+        color: var(--white-clr);
+        background: rgba(0, 0, 0, 0.6);
+        padding: 2.5em;
+        border-radius: 12px;
+        
+        h2{
+            color: var(--primary-dark-clr);
+            margin-bottom: .5em;
         }
 
-        &::after{
-             @include a.underlineEffect(25px, 10px)
-        }
-
-        &:hover::after{
+        @media (max-width: 992px) {
             width: 60%;
+            left: 0;
+        }
+
+        @media (max-width: 767px) {
+            position: relative;
+            width: 90%;
+            left: 0;
+            top: auto;
+            transform: none;
         }
     }
 }
 
 // ========== BEST SELLERS SECTION ==========
-.best__sellers{
-    margin-bottom: 20em;
+.best__sellers .product__card{
+    max-width: 100%; 
+    margin: 0 auto;
+
+    @media (max-width: 767px) {
+        max-width: 100%;
+    }
+
+    .product__card__body{
+        padding-bottom: 1rem;
+    }
 }
-
-.best__sellers .product__card__body{
-    padding: 1em 1em 2em; 
-    padding-bottom: 0;
-}
-
-
-
-
-
-
-
-
 
 
