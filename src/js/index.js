@@ -34,6 +34,7 @@ window.addEventListener('scroll', () => {
     }
 });
 
+
 $(document).ready(function() {
     $('#autoWidth').lightSlider({
         autoWidth:true,
@@ -43,3 +44,18 @@ $(document).ready(function() {
         } 
     });  
 });
+
+
+// CART MENU
+let cartIcons = document.querySelectorAll('.cart__icon'); 
+let cart = document.querySelector('.cart'); 
+let closeCart = document.querySelector('.close__cart'); 
+
+cartIcons.forEach(cartIcon => {
+    cartIcon.addEventListener('click', () => cart.classList.add('active'));
+});
+
+closeCart.addEventListener('click', () => cart.classList.remove('active')); 
+
+
+
