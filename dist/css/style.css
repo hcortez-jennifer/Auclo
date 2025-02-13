@@ -11873,6 +11873,10 @@ h2 {
   font-weight: 700;
 }
 
+h5 {
+  font-weight: 600;
+}
+
 .cta {
   position: relative;
   display: inline-block;
@@ -11900,6 +11904,42 @@ h2 {
 }
 .cta:hover::after {
   width: 60%;
+}
+
+.footer {
+  margin-top: 7em;
+}
+.footer a {
+  color: var(--black-clr);
+}
+
+.footer__container .footer__icons > .footer__item {
+  margin: 0.3em;
+}
+.footer__container label {
+  width: 90%;
+  height: 60px;
+  border-bottom: 1.5px solid var(--black-clr);
+}
+.footer__container label input {
+  width: 100%;
+  border: none;
+  outline: none;
+  padding-block: 0.5em;
+}
+.footer__container label button {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  border: none;
+  background-color: var(--black-clr);
+  color: var(--white-clr);
+}
+.footer__container .payment__methods > img {
+  margin: 0.5em;
 }
 
 .navbar {
