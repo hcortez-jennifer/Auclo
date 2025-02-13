@@ -12367,6 +12367,31 @@ h5 {
   cursor: pointer;
 }
 
+.product__modal__window {
+  background-color: var(--white-clr);
+  width: 60%;
+  height: 500px;
+  margin: 5% auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.proudct__modal__window__header h4 {
+  font-family: "Ibarra Real Nova", serif;
+  font-weight: 700;
+}
+
+.size__btn {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: none;
+  background: #ddd;
+  cursor: pointer;
+}
+
 .container {
   max-width: 80.5%;
   margin: 0 auto;
