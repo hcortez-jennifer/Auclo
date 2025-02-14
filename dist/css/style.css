@@ -12281,9 +12281,10 @@ h5 {
 }
 .customization__content .customization__details .cta {
   margin-top: 2em;
+  border: none;
 }
 .customization__content .customization__details .cta:hover {
-  color: var(--black-clr);
+  background-color: var(--primary-dark-clr);
 }
 .customization__content img {
   border-radius: 12px;
