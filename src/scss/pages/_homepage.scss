@@ -156,9 +156,10 @@
     .customization__details{
         .cta{
             margin-top: 2em;
+            border: none;
     
             &:hover{
-                color: var(--black-clr);
+                background-color: var(--primary-dark-clr);
             }
         }
     }
