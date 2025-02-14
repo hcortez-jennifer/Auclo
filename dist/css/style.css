@@ -12249,6 +12249,10 @@ h5 {
 .product__card__body .product__card__body__details {
   color: var(--grey-clr);
 }
+.product__card__body .price {
+  font-size: 1.2rem;
+  font-weight: 550;
+}
 .product__card__body .bx-shopping-bag {
   background-color: var(--black-clr);
   color: var(--white-clr);
@@ -12462,6 +12466,14 @@ h5 {
 }
 .customization__content img {
   border-radius: 12px;
+}
+
+.navigation .container span {
+  color: var(--grey-clr);
+}
+.navigation .container .bold {
+  font-weight: 600;
+  color: var(--black-clr);
 }
 
 .container {
