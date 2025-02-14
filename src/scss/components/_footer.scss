@@ -1,0 +1,48 @@
+@use '../abstracts' as a;
+
+.footer{
+    margin-top: 7em;
+
+    a{
+        color: var(--black-clr);
+    }
+}
+
+.footer__container{
+    .footer__icons > .footer__item{
+        margin: .3em;
+    } 
+
+    label{
+        width: 90%;
+        height: 60px;
+        border-bottom: 1.5px solid var(--black-clr);
+
+        input{
+            width: 100%;
+            border: none;
+            outline: none;
+            padding-block: .5em;
+        }
+
+        button{
+            width: 40px;
+            height: 40px;
+            @include a.centerPage;
+            border-radius: 50%;
+            border: none;
+            background-color: var(--black-clr);
+            color: var(--white-clr);
+        }
+    }
+    
+    .payment__methods > img{
+        margin: .5em;
+    }
+} 
+
+
+
+
+
+

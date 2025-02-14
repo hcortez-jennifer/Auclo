@@ -1,0 +1,18 @@
+// CALL TO ACTION BTN
+@use '../abstracts' as a;
+
+.cta{
+    @include a.ctaButton;
+
+    &:hover {
+        background-color: transparent;
+    }
+    
+    &::after {
+        @include a.underlineEffect(25px, 10px)
+    }
+    
+    &:hover::after {
+        width: 60%;
+    }
+}

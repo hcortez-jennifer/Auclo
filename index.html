@@ -6,6 +6,9 @@
     <title>Auclo</title>
     <link rel="stylesheet" href="dist/css/style.css">
     <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" type="text/css" href="dist/css/lightslider.css">
+    <script type="text/javascript" src="src/js/Jquery.js"></script>
+    <script type="text/javascript" src="src/js/lightslider.js"></script>
 </head>
 <body>
     <header>
@@ -71,9 +74,9 @@
     <section class="hero">
         <div class="container hero__container">
             <div class="hero__content">
-                <h1>Time is More Than Seconds— <span class="green-clr">It’s a Legacy</span></h1>
+                <h1>Time is More Than Seconds—It’s a Legacy</h1>
                 <p>Introducing the ChronoX Collection, a fusion of craftsmanship, innovation, and timeless elegance.</p>
-                <a href="#" class="hero__cta text-decoration-none">Shop Now</a>
+                <a href="#" class="cta text-decoration-none">Shop Now</a>
             </div>
         </div>
     </section>
@@ -85,7 +88,6 @@
                     <h2 class="text-uppercase">Categories</h2>
                     <hr>
                 </div>
-
                 <div class="row g-3">
                     <div class="col-lg-6">
                         <div class="category__card">
@@ -107,7 +109,310 @@
             </div>
         </div>
     </section>
-    
+
+    <section class="new__arrivals">
+        <div class="container new__arrivals__container">
+            <div class="new__arrivals__content">
+                <div class="header text-center">
+                    <h2 class="text-uppercase">New arrivals</h2>
+                    <hr>
+                </div>
+                <div>
+                    <ul id="autoWidth" class="cs-hidden">
+                        <li class="item-a">
+                            <div class="product__card">
+                                <div class="product__card__img text-center">
+                                    <img src="assets/img/watch1.png" class="img-fluid" alt="">
+                                </div>
+                                <div class="product__card__body">
+                                    <h4>Horlogerie</h4>
+                                    <p class="product__card__body__details">Brown leather watch with silver bezel and rose gold hands, perfect for any occasion.</p>
+                                    <div class="product__card__price d-flex justify-content-between align-items-center">
+                                        <p class="m-0">$379.00</p>
+                                        <div><i class='bx bx-shopping-bag'></i></div>
+                                    </div>
+                                </div>
+                            </div> 
+                        </li>
+                        <li class="item-a">
+                            <div class="product__card">
+                                <div class="product__card__img text-center">
+                                    <img src="assets/img/watch2.png" class="img-fluid" alt="">
+                                </div>
+                                <div class="product__card__body">
+                                    <h4>Titan Black</h4>
+                                    <p class="product__card__body__details">Black leather strap and matching dial for a sharp, minimalist look.</p>
+                                    <div class="product__card__price d-flex justify-content-between align-items-center">
+                                        <p class="m-0">$7,345.00</p>
+                                        <div><i class='bx bx-shopping-bag'></i></div>
+                                    </div>
+                                </div>
+                            </div> 
+                        </li>
+                        <li class="item-a">
+                            <div class="product__card">
+                                <div class="product__card__img text-center">
+                                    <img src="assets/img/watch3.png" class="img-fluid" alt="">
+                                </div>
+                                <div class="product__card__body">
+                                    <h4>Moonstone-TIX</h4>
+                                    <p class="product__card__body__details">Sleek and modern timepiece featuring a stunning marble dial.</p>
+                                    <div class="product__card__price d-flex justify-content-between align-items-center">
+                                        <p class="m-0">$140.00</p>
+                                        <div><i class='bx bx-shopping-bag'></i></div>
+                                    </div>
+                                </div>
+                            </div> 
+                        </li>
+                        <li class="item-a">
+                            <div class="product__card">
+                                <div class="product__card__img text-center">
+                                    <img src="assets/img/watch4.png" class="img-fluid" alt="">
+                                </div>
+                                <div class="product__card__body">
+                                    <h4>Aureate</h4>
+                                    <p class="product__card__body__details">A refined gold watch with a brown leather strap, perfect for classic elegance.</p>
+                                    <div class="product__card__price d-flex justify-content-between align-items-center">
+                                        <p class="m-0">$450.00</p>
+                                        <div><i class='bx bx-shopping-bag'></i></div>
+                                    </div>
+                                </div>
+                            </div> 
+                        </li>
+                        <li class="item-a">
+                            <div class="product__card">
+                                <div class="product__card__img text-center">
+                                    <img src="assets/img/watch5.png" class="img-fluid" alt="">
+                                </div>
+                                <div class="product__card__body">
+                                    <h4>Celestial Chrono</h4>
+                                    <p class="product__card__body__details">A bold silver watch with a stunning royal blue dial for a distinguished look.</p>
+                                    <div class="product__card__price d-flex justify-content-between align-items-center">
+                                        <p class="m-0">$2,541.00</p>
+                                        <div><i class='bx bx-shopping-bag'></i></div>
+                                    </div>
+                                </div>
+                            </div> 
+                        </li>
+                        <li class="item-a">
+                            <div class="product__card">
+                                <div class="product__card__img text-center">
+                                    <img src="assets/img/watch6.png" class="img-fluid" alt="">
+                                </div>
+                                <div class="product__card__body">
+                                    <h4>OAX-rose</h4>
+                                    <p class="product__card__body__details">Rose gold watch with diamond-engraved bezel, exuding timeless elegance.</p>
+                                    <div class="product__card__price d-flex justify-content-between align-items-center">
+                                        <p class="m-0">$5,960.00</p>
+                                        <div><i class='bx bx-shopping-bag'></i></div>
+                                    </div>
+                                </div>
+                            </div> 
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about">
+        <div class="container about__container">
+            <div class="about__content position-relative">
+                <video autoplay loop width="100%" class="p-5">
+                    <source src="assets/vid/about.mp4" type="video/mp4">
+                </video>
+
+                <div class="col-3 about__info">
+                    <h2 class="text-uppercase">Why Choose Us? —</h2>
+
+                    <p class="m-0">We believe a watch is more than just a timepiece—it’s a statement of elegance, craftsmanship, and prestige. Our collection features the finest luxury watches from around the world, each meticulously designed to complement your style.</p>
+
+                    <a href="#" class="cta text-decoration-none">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="best__sellers">
+        <div class="container best__sellers__container">
+            <div class="best__sellers__content">
+                <div class="header text-center">
+                    <h2 class="text-uppercase">Best sellers</h2>
+                    <hr>
+                </div>
+
+                <div class="row row-gap-5">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="product__card">
+                            <div class="product__card__img text-center">
+                                <img src="assets/img/watch7.png" class="img-fluid" alt="">
+                                <div class="product__card__icons">
+                                    <a href="#" class="text-decoration-none"><i class='bx bx-heart'></i></a>
+                                    <a href="#" class="text-decoration-none"><i class='bx bx-shopping-bag'></i></a>
+                                    <a href="#" class="text-decoration-none"><i class='bx bx-search'></i></a>
+                                </div>
+                            </div>
+                            <div class="product__card__body text-center">
+                                <h4>Nautilus</h4>
+                                <p class="product__card__body__details">A sophisticated silver watch with a royal blue leather strap, ideal for everyday elegance.</p>
+                                <p>$431.00</p>
+                            </div>
+                        </div> 
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="product__card">
+                            <div class="product__card__img text-center">
+                                <img src="assets/img/watch8.png" class="img-fluid" alt="">
+                                <div class="product__card__icons">
+                                    <a href="#" class="text-decoration-none"><i class='bx bx-heart'></i></a>
+                                    <a href="#" class="text-decoration-none"><i class='bx bx-shopping-bag'></i></a>
+                                    <a href="#" class="text-decoration-none"><i class='bx bx-search'></i></a>
+                                </div>
+                            </div>
+                            <div class="product__card__body text-center">
+                                <h4>Celestial Luxe</h4>
+                                <p class="product__card__body__details">A royal blue and rose gold watch that combines luxury with modern sophistication.</p>
+                                <p>$525.00</p>
+                            </div>
+                        </div> 
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="product__card">
+                            <div class="product__card__img text-center">
+                                <img src="assets/img/watch9.png" class="img-fluid" alt="">
+                                <div class="product__card__icons">
+                                    <a href="#" class="text-decoration-none"><i class='bx bx-heart'></i></a>
+                                    <a href="#" class="text-decoration-none"><i class='bx bx-shopping-bag'></i></a>
+                                    <a href="#" class="text-decoration-none"><i class='bx bx-search'></i></a>
+                                </div>
+                            </div>
+                            <div class="product__card__body text-center">
+                                <h4>Onyx Prime</h4>
+                                <p class="product__card__body__details"> A sophisticated silver watch with a bold black face, perfect for timeless elegance.</p>
+                                <p>$10,318.00</p>
+                            </div>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="customization">
+        <div class="container customization__container">
+            <div class="customization__content d-flex align-items-center gap-5">
+                <div class="customization__details col-lg-5 col-md-6">
+                    <h2>Make It Yours—A Watch as Unique as You</h2>
+                    <p>Your watch should be more than just an accessory, it should tell your story. Our customization options, allow you to engrave initials, select exclusive materials, and craft a timepiece that reflects your personal style.</p>
+                    <a href="#" class="cta text-decoration-none">Start Customizing</a>
+                </div>
+                <img src="assets/img/customize.jpg" alt="" class="img-fluid col-lg-7 col-md-6">
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container footer__container">
+            <div class="row">
+                <div class="col-lg-6 col-md-12">
+                    <div class="newsletter__details">
+                        <h5>Stay in the Loop—Join Our Exclusive List</h5>
+                        <p>Be the first to know about new arrivals, exclusive deals, and timeless collections. Subscribe to our newsletter and never miss a moment.</p>
+                        <label class="d-flex align-items-center">
+                            <input type="email" placeholder="Enter your email" required>
+                            <button type="submit"><i class='bx bx-right-arrow-alt'></i></button>
+                        </label>
+                    </div>
+                    <ul class="footer__icons list-unstyled mt-3 d-flex">
+                        <li class="footer__item">
+                            <a href="#" class="footer__link text-decoration-none"><i class='bx bxl-instagram'></i></a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="#" class="footer__link text-decoration-none"><i class='bx bxl-facebook'></i></a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="#" class="footer__link text-decoration-none"><i class='bx bxl-twitter'></i></a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="#" class="footer__link text-decoration-none"><i class='bx bxl-pinterest'></i></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-4">
+                    <h5>Shop</h5>
+                    <ul class="list-unstyled">
+                        <li class="footer__item">
+                            <a href="#" class="footer__link text-decoration-none">All</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="#" class="footer__link text-decoration-none">New</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="#" class="footer__link text-decoration-none">Best Sellers</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="#" class="footer__link text-decoration-none">Women's Watches</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="#" class="footer__link text-decoration-none">Men's Watches</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-4">
+                    <h5>Information</h5>
+                    <ul class="list-unstyled">
+                        <li class="footer__item">
+                            <a href="#" class="footer__link text-decoration-none">About Us</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="#" class="footer__link text-decoration-none">Contact Us</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="#" class="footer__link text-decoration-none">Shipping & Returns</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="#" class="footer__link text-decoration-none">FAQs</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-4">
+                    <h5>Legal</h5>
+                    <ul class="list-unstyled">
+                        <li class="footer__item">
+                            <a href="#" class="footer__link text-decoration-none">Privacy Policy</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="#" class="footer__link text-decoration-none">Conditions of Use</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="#" class="footer__link text-decoration-none">Cookie Notice</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="#" class="footer__link text-decoration-none">Terms of Use</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row border-top py-2 d-flex justify-content-between align-items-center">
+                <div class="col-auto">
+                    <small> &copy; 2025 Jennifer Cortez Herrera | Icons by <a target="_blank" href="https://icons8.com">Icons8</a></small>
+                </div>
+                <div class="payment__methods col-auto">
+                    <img src="assets/img/icons8-amex-48.png" alt="">
+                    <img src="assets/img/icons8-apple-pay-48.png" alt="">
+                    <img src="assets/img/icons8-google-pay-48.png" alt="">
+                    <img src="assets/img/icons8-mastercard-logo-48.png" alt="">
+                    <img src="assets/img/icons8-paypal-48.png" alt="">
+                    <img src="assets/img/icons8-visa-48.png" alt="">
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+  
+
+
 
 
 
