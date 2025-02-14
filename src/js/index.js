@@ -1,6 +1,6 @@
 // NAVBAR DROPDOWN
 document.querySelectorAll('.nav-item.dropdown').forEach(dropdown => {
-    const menu = dropdown.querySelector('.dropdown-menu');
+    let menu = dropdown.querySelector('.dropdown-menu');
 
     dropdown.addEventListener('mouseenter', () => menu.classList.add('show'));
     dropdown.addEventListener('mouseleave', () => menu.classList.remove('show'));
@@ -34,6 +34,7 @@ window.addEventListener('scroll', () => {
     }
 });
 
+// SLIDER
 $(document).ready(function() {
     $('#autoWidth').lightSlider({
         autoWidth:true,
@@ -43,3 +44,32 @@ $(document).ready(function() {
         } 
     });  
 });
+
+
+// MODAL WINDOWS
+let openModals = document.querySelectorAll('.open__modal');
+let closeModals = document.querySelectorAll('.close__modal__window');
+let modalWindows = document.querySelectorAll('.product__modal__window__container');
+
+openModals.forEach((openModal, index) => {
+    openModal.addEventListener('click', () => 
+        modalWindows[index].style.display = 'flex');
+});
+
+closeModals.forEach((closeModal, index) => {
+    closeModal.addEventListener('click', () => modalWindows[index].style.display = 'none');
+});
+
+
+
+// CART MENU
+let cartIcons = document.querySelectorAll('.cart__icon'); 
+let cart = document.querySelector('.cart'); 
+let closeCart = document.querySelector('.close__cart'); 
+
+cartIcons.forEach(cartIcon => {
+    cartIcon.addEventListener('click', () => cart.classList.add('active'));
+});
+
+closeCart.addEventListener('click', () => cart.classList.remove('active')); 
+
