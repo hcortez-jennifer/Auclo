@@ -12474,7 +12474,7 @@ h5 {
   }
 }
 
-section:not(.hero, .product__list) {
+section:not(.hero, .product__list, .product__modal__windows) {
   margin-top: 7em;
 }
 
