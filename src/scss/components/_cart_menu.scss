@@ -1,0 +1,62 @@
+@use '../abstracts' as a;
+
+.cart{
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 360px;
+    height: 100%;
+    background: white;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    padding: 65px 20px 40px;
+    z-index: 100;
+    overflow: auto;
+    transition: .5s;
+
+    &.active{
+        right: 0;
+    }
+}
+
+.cart__img {
+    max-width: 100px; 
+    height: auto;
+}
+
+.cart__details {
+    flex-grow: 1;
+
+    h4{
+        font-family: "Ibarra Real Nova", serif;
+    }
+}
+
+.cart__quantity button{
+    width: 30px;
+    height: 30px;
+    border: none;
+    background: #ddd;
+    cursor: pointer;
+}
+
+.cart__total{
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.close__cart{
+    font-size: 2.5rem;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.cart__btn{
+    @include a.ctaButton;
+    border: none;
+}
+
+.cart__icon, .bx-trash{
+    cursor: pointer;
+}

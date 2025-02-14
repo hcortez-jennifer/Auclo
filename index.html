@@ -23,7 +23,7 @@
                     <a href="#" class="nav-link icon-link"><i class='bx bx-search'></i></a>
                     <div class="nav-link icon-link position-relative">
                         <i class='bx bx-shopping-bag cart__icon'></i>
-                        <span class="badge position-absolute translate-middle rounded-pill">0</span>
+                        <span class="badge position-absolute translate-middle rounded-pill">1</span>
                     </div>     
                 </div>
     
@@ -61,7 +61,7 @@
                     <li class="nav-item position-relative">
                         <div class="nav-link">
                             <i class='bx bx-shopping-bag cart__icon'></i>
-                            <span class="badge position-absolute translate-middle rounded-pill">0</span>
+                            <span class="badge position-absolute translate-middle rounded-pill">1</span>
                         </div>
                     </li>
                     <li class="nav-item"><a href="#" class="nav-link"><i class='bx bx-heart'></i></a></li>
@@ -129,7 +129,7 @@
                                     <p class="product__card__body__details">Rose gold watch with diamonds engrave around bezel.</p>
                                     <div class="product__card__price d-flex justify-content-between align-items-center">
                                         <p class="m-0">$279.00</p>
-                                        <div><i class='bx bx-shopping-bag'></i></div>
+                                        <div class="open__modal"><i class='bx bx-shopping-bag'></i></div>
                                     </div>
                                 </div>
                             </div> 
@@ -144,7 +144,7 @@
                                     <p class="product__card__body__details">Rose gold watch with diamonds engrave around bezel.</p>
                                     <div class="product__card__price d-flex justify-content-between align-items-center">
                                         <p class="m-0">$279.00</p>
-                                        <div><i class='bx bx-shopping-bag'></i></div>
+                                        <div class="open__modal"><i class='bx bx-shopping-bag'></i></div>
                                     </div>
                                 </div>
                             </div> 
@@ -159,7 +159,7 @@
                                     <p class="product__card__body__details">Rose gold watch with diamonds engrave around bezel.</p>
                                     <div class="product__card__price d-flex justify-content-between align-items-center">
                                         <p class="m-0">$279.00</p>
-                                        <div><i class='bx bx-shopping-bag'></i></div>
+                                        <div class="open__modal"><i class='bx bx-shopping-bag'></i></div>
                                     </div>
                                 </div>
                             </div> 
@@ -174,7 +174,7 @@
                                     <p class="product__card__body__details">Rose gold watch with diamonds engrave around bezel.</p>
                                     <div class="product__card__price d-flex justify-content-between align-items-center">
                                         <p class="m-0">$279.00</p>
-                                        <div><i class='bx bx-shopping-bag'></i></div>
+                                        <div class="open__modal"><i class='bx bx-shopping-bag'></i></div>
                                     </div>
                                 </div>
                             </div> 
@@ -189,7 +189,7 @@
                                     <p class="product__card__body__details">Rose gold watch with diamonds engrave around bezel.</p>
                                     <div class="product__card__price d-flex justify-content-between align-items-center">
                                         <p class="m-0">$279.00</p>
-                                        <div><i class='bx bx-shopping-bag'></i></div>
+                                        <div class="open__modal"><i class='bx bx-shopping-bag'></i></div>
                                     </div>
                                 </div>
                             </div> 
@@ -204,7 +204,7 @@
                                     <p class="product__card__body__details">Rose gold watch with diamonds engrave around bezel.</p>
                                     <div class="product__card__price d-flex justify-content-between align-items-center">
                                         <p class="m-0">$279.00</p>
-                                        <div><i class='bx bx-shopping-bag'></i></div>
+                                        <div class="open__modal"><i class='bx bx-shopping-bag'></i></div>
                                     </div>
                                 </div>
                             </div> 
@@ -431,13 +431,13 @@
 
 <div class="cart mt-5">
     <h2 class="text-center">Your Bag</h2>
-    <div class="cart__content">
-        <div class="cart__item d-flex align-items-center">
+    <div class="cart__content d-flex flex-column row-gap-4">
+        <div class="cart__item d-flex justify-content-between align-items-center">
             <img src="assets/img/watch1.png" alt="" class="cart__img img-fluid">
             <div class="cart__details ms-3">
                 <div class="top">
-                    <h5 class="mb-1">OAX-rose</h5>
-                    <p class="text-muted">$279.00</p>
+                    <h4 class="mb-1">Horlogerie</h4>
+                    <p class="text-muted">$379.00</p>
                     <p>Size: M</p>
                 </div>
                 <div class="bottom d-flex align-items-center justify-content-between">
@@ -453,7 +453,7 @@
 
         <div class="cart__total d-flex justify-content-between pt-3 border-top">
             <div><strong>Total:</strong></div>
-            <div class="total__price">$0</div>
+            <div class="total__price">$379.00</div>
         </div>
 
         <a href="#" class="cart__btn text-decoration-none btn btn-dark w-100 mt-3">Proceed to Checkout</a>
@@ -461,31 +461,36 @@
     </div>
 </div>
 
-
 <section class="product__modal__windows">
     <div class="product__modal__window__container">
-        <div class="product__modal__window">
-            <img src="assets/img/watch1.png" alt="">
-            <div class="product__modal__window__details">
-                <div class="proudct__modal__window__header d-flex">
-                    <h4>OAX-rose</h4>
-                    <div class="rating d-flex">
-                        <i class='bx bxs-star pe-1'></i>
-                        <p>4.5</p>
+        <div class="product__modal__window d-flex gap-5">
+            <div class="product__card__img">
+                <img src="assets/img/watch1.png" alt="">
+            </div>
+            <div class="product__modal__window__content">
+                <div class="product__modal__window__header d-flex justify-content-between align-items-center">
+                    <h4 class="mb-1">Horlogerie</h4>
+                    <div class="rating d-flex align-items-center">
+                        <i class='bx bxs-star pe-1 text-warning'></i>
+                        <p class="mb-0">4.0</p>
                     </div>
                 </div>
 
-                <p class="product__modal__window__price">$279.00</p>
+                <div class="product__modal__window__info">
+                    <p class="product__modal__window__price">$379.00</p>
+                    <p class="product__modal__window__details">Brown leather watch with silver bezel and rose gold hands, perfect for any occasion. <a href="#">View product details.</a></p> 
+                </div>
 
-                <div class="product__modal__window__size">
-                    <p>Size: </p>
-                    <button class="size__btn">S</button>
+                <div class="product__modal__window__size mb-2">
+                    <p class="mb-1">Size: </p>
+                    <button class="size__btn ms-0">S</button>
                     <button class="size__btn">M</button>
                     <button class="size__btn">L</button>
                     <button class="size__btn">XL</button>
                 </div>
 
-                <div class="product__modal__window__quantity">
+                <div class="product__modal__window__quantity d-flex align-items-center mt-3">
+                    <p class="mb-1 me-2">Quantity: </p>
                     <div class="cart__quantity d-flex align-items-center">
                         <button class="decrement btn btn-outline-dark btn-sm">-</button>
                         <span class="number mx-2">0</span>
@@ -493,17 +498,232 @@
                     </div>
                 </div>
 
-                <div class="product__modal__window__cta">
-                    <div class="add__cart__cta">
-                        <button class="add-counter">Add to cart</button>
-                        <a href="#"><i class='bx bx-heart'></i></a>
-                    </div>
-                    <div class="product__details__cta">
-                        <button>View product details</button>
-                    </div>
+                <div class="product__modal__window__cta mt-5 d-flex column-gap-3">
+                    <button class="add__counter btn btn-dark border-0">Add to cart</button>
+                    <a href="#" class="text-decoration-none"><i class='bx bx-heart'></i></a>
                 </div>
             </div>
-            <i class='bx bx-x close__cart fs-3'></i>
+            <div class="product__modal__window__icon"><i class="bx bx-x close__modal__window"></i></div>
+        </div>
+    </div>
+    <div class="product__modal__window__container">
+        <div class="product__modal__window d-flex gap-5">
+            <div class="product__card__img">
+                <img src="assets/img/watch2.png" alt="">
+            </div>
+            <div class="product__modal__window__content">
+                <div class="product__modal__window__header d-flex justify-content-between align-items-center">
+                    <h4 class="mb-1">Titan Black</h4>
+                    <div class="rating d-flex align-items-center">
+                        <i class='bx bxs-star pe-1 text-warning'></i>
+                        <p class="mb-0">4.3</p>
+                    </div>
+                </div>
+
+                <div class="product__modal__window__info">
+                    <p class="product__modal__window__price">$7,345.00</p>
+                    <p class="product__modal__window__details">Black leather strap and matching dial for a sharp, minimalist look. <a href="#">View product details.</a></p> 
+                </div>
+
+                <div class="product__modal__window__size mb-2">
+                    <p class="mb-1">Size: </p>
+                    <button class="size__btn ms-0">S</button>
+                    <button class="size__btn">M</button>
+                    <button class="size__btn">L</button>
+                    <button class="size__btn">XL</button>
+                </div>
+
+                <div class="product__modal__window__quantity d-flex align-items-center mt-3">
+                    <p class="mb-1 me-2">Quantity: </p>
+                    <div class="cart__quantity d-flex align-items-center">
+                        <button class="decrement btn btn-outline-dark btn-sm">-</button>
+                        <span class="number mx-2">0</span>
+                        <button class="increment btn btn-outline-dark btn-sm">+</button>
+                    </div>
+                </div>
+
+                <div class="product__modal__window__cta mt-5 d-flex column-gap-3">
+                    <button class="add__counter btn btn-dark border-0">Add to cart</button>
+                    <a href="#" class="text-decoration-none"><i class='bx bx-heart'></i></a>
+                </div>
+            </div>
+            <div class="product__modal__window__icon"><i class="bx bx-x close__modal__window"></i></div>
+        </div>
+    </div>
+    <div class="product__modal__window__container">
+        <div class="product__modal__window d-flex gap-5">
+            <div class="product__card__img">
+                <img src="assets/img/watch3.png" alt="">
+            </div>
+            <div class="product__modal__window__content">
+                <div class="product__modal__window__header d-flex justify-content-between align-items-center">
+                    <h4 class="mb-1">Moonstone-TIX</h4>
+                    <div class="rating d-flex align-items-center">
+                        <i class='bx bxs-star pe-1 text-warning'></i>
+                        <p class="mb-0">3.5</p>
+                    </div>
+                </div>
+
+                <div class="product__modal__window__info">
+                    <p class="product__modal__window__price">$140.00</p>
+                    <p class="product__modal__window__details">Sleek and modern timepiece featuring a stunning marble dial. <a href="#">View product details.</a></p> 
+                </div>
+
+                <div class="product__modal__window__size mb-2">
+                    <p class="mb-1">Size: </p>
+                    <button class="size__btn ms-0">S</button>
+                    <button class="size__btn">M</button>
+                    <button class="size__btn">L</button>
+                    <button class="size__btn">XL</button>
+                </div>
+
+                <div class="product__modal__window__quantity d-flex align-items-center mt-3">
+                    <p class="mb-1 me-2">Quantity: </p>
+                    <div class="cart__quantity d-flex align-items-center">
+                        <button class="decrement btn btn-outline-dark btn-sm">-</button>
+                        <span class="number mx-2">0</span>
+                        <button class="increment btn btn-outline-dark btn-sm">+</button>
+                    </div>
+                </div>
+
+                <div class="product__modal__window__cta mt-5 d-flex column-gap-3">
+                    <button class="add__counter btn btn-dark border-0">Add to cart</button>
+                    <a href="#" class="text-decoration-none"><i class='bx bx-heart'></i></a>
+                </div>
+            </div>
+            <div class="product__modal__window__icon"><i class="bx bx-x close__modal__window"></i></div>
+        </div>
+    </div>
+    <div class="product__modal__window__container">
+        <div class="product__modal__window d-flex gap-5">
+            <div class="product__card__img">
+                <img src="assets/img/watch4.png" alt="">
+            </div>
+            <div class="product__modal__window__content">
+                <div class="product__modal__window__header d-flex justify-content-between align-items-center">
+                    <h4 class="mb-1">Aureate</h4>
+                    <div class="rating d-flex align-items-center">
+                        <i class='bx bxs-star pe-1 text-warning'></i>
+                        <p class="mb-0">4.3</p>
+                    </div>
+                </div>
+
+                <div class="product__modal__window__info">
+                    <p class="product__modal__window__price">$450.00</p>
+                    <p class="product__modal__window__details">A refined gold watch with a brown leather strap, perfect for classic elegance. <a href="#">View product details.</a></p> 
+                </div>
+
+                <div class="product__modal__window__size mb-2">
+                    <p class="mb-1">Size: </p>
+                    <button class="size__btn ms-0">S</button>
+                    <button class="size__btn">M</button>
+                    <button class="size__btn">L</button>
+                    <button class="size__btn">XL</button>
+                </div>
+
+                <div class="product__modal__window__quantity d-flex align-items-center mt-3">
+                    <p class="mb-1 me-2">Quantity: </p>
+                    <div class="cart__quantity d-flex align-items-center">
+                        <button class="decrement btn btn-outline-dark btn-sm">-</button>
+                        <span class="number mx-2">0</span>
+                        <button class="increment btn btn-outline-dark btn-sm">+</button>
+                    </div>
+                </div>
+
+                <div class="product__modal__window__cta mt-5 d-flex column-gap-3">
+                    <button class="add__counter btn btn-dark border-0">Add to cart</button>
+                    <a href="#" class="text-decoration-none"><i class='bx bx-heart'></i></a>
+                </div>
+            </div>
+            <div class="product__modal__window__icon"><i class="bx bx-x close__modal__window"></i></div>
+        </div>
+    </div>
+    <div class="product__modal__window__container">
+        <div class="product__modal__window d-flex gap-5">
+            <div class="product__card__img">
+                <img src="assets/img/watch5.png" alt="">
+            </div>
+            <div class="product__modal__window__content">
+                <div class="product__modal__window__header d-flex justify-content-between align-items-center">
+                    <h4 class="mb-1">Celestial Chrono</h4>
+                    <div class="rating d-flex align-items-center">
+                        <i class='bx bxs-star pe-1 text-warning'></i>
+                        <p class="mb-0">3.8</p>
+                    </div>
+                </div>
+
+                <div class="product__modal__window__info">
+                    <p class="product__modal__window__price">$2,541.00</p>
+                    <p class="product__modal__window__details">A bold silver watch with a stunning royal blue dial for a distinguished look. <a href="#">View product details.</a></p> 
+                </div>
+
+                <div class="product__modal__window__size mb-2">
+                    <p class="mb-1">Size: </p>
+                    <button class="size__btn ms-0">S</button>
+                    <button class="size__btn">M</button>
+                    <button class="size__btn">L</button>
+                    <button class="size__btn">XL</button>
+                </div>
+
+                <div class="product__modal__window__quantity d-flex align-items-center mt-3">
+                    <p class="mb-1 me-2">Quantity: </p>
+                    <div class="cart__quantity d-flex align-items-center">
+                        <button class="decrement btn btn-outline-dark btn-sm">-</button>
+                        <span class="number mx-2">0</span>
+                        <button class="increment btn btn-outline-dark btn-sm">+</button>
+                    </div>
+                </div>
+
+                <div class="product__modal__window__cta mt-5 d-flex column-gap-3">
+                    <button class="add__counter btn btn-dark border-0">Add to cart</button>
+                    <a href="#" class="text-decoration-none"><i class='bx bx-heart'></i></a>
+                </div>
+            </div>
+            <div class="product__modal__window__icon"><i class="bx bx-x close__modal__window"></i></div>
+        </div>
+    </div>
+    <div class="product__modal__window__container">
+        <div class="product__modal__window d-flex gap-5">
+            <div class="product__card__img">
+                <img src="assets/img/watch6.png" alt="">
+            </div>
+            <div class="product__modal__window__content">
+                <div class="product__modal__window__header d-flex justify-content-between align-items-center">
+                    <h4 class="mb-1">OAX-rose</h4>
+                    <div class="rating d-flex align-items-center">
+                        <i class='bx bxs-star pe-1 text-warning'></i>
+                        <p class="mb-0">3.8</p>
+                    </div>
+                </div>
+
+                <div class="product__modal__window__info">
+                    <p class="product__modal__window__price">$5,960.00</p>
+                    <p class="product__modal__window__details">Rose gold watch with diamond-engraved bezel, exuding timeless elegance. <a href="#">View product details.</a></p> 
+                </div>
+
+                <div class="product__modal__window__size mb-2">
+                    <p class="mb-1">Size: </p>
+                    <button class="size__btn ms-0">S</button>
+                    <button class="size__btn">M</button>
+                    <button class="size__btn">L</button>
+                    <button class="size__btn">XL</button>
+                </div>
+
+                <div class="product__modal__window__quantity d-flex align-items-center mt-3">
+                    <p class="mb-1 me-2">Quantity: </p>
+                    <div class="cart__quantity d-flex align-items-center">
+                        <button class="decrement btn btn-outline-dark btn-sm">-</button>
+                        <span class="number mx-2">0</span>
+                        <button class="increment btn btn-outline-dark btn-sm">+</button>
+                    </div>
+                </div>
+
+                <div class="product__modal__window__cta mt-5 d-flex column-gap-3">
+                    <button class="add__counter btn btn-dark border-0">Add to cart</button>
+                    <a href="#" class="text-decoration-none"><i class='bx bx-heart'></i></a>
+                </div>
+            </div>
+            <div class="product__modal__window__icon"><i class="bx bx-x close__modal__window"></i></div>
         </div>
     </div>
 </section>
@@ -515,8 +735,11 @@
 
 
 
-  
-  
+
+
+
+
+
     <script src="src/js/index.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 </body>

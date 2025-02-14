@@ -1,0 +1,119 @@
+@use '../abstracts' as a;
+
+.product__modal__window__container{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(50, 50, 50, 0.8);
+    @include a.centerPage;
+    transition: 0.3s ease-in-out;
+    z-index: 200;
+    display: none;
+}
+
+.product__modal__window{
+    background-color: white;
+    width: 90%;
+    max-width: 800px;
+    height: auto;
+    margin: 5% auto;
+    padding: 20px;
+    border-radius: 12px;
+
+    .product__card__img{
+        background-color: var(--secondary-clr);
+        border-radius: 8px;
+        @include a.centerPage;
+        
+        img{
+            max-width: 300px; 
+            height: auto;
+        }
+    }
+}
+
+.product__modal__window__content{
+    margin-top: 4em;
+}
+    
+.product__modal__window__info{
+    .product__modal__window__price{
+        color: var(--primary-dark-clr);
+        font-weight: 700;
+    }
+
+    .product__modal__window__details{
+        font-size: 0.875rem;
+
+        a{
+            font-weight: 600;
+            color: var(--black-clr);
+        }
+    }
+}
+
+.product__modal__window__size{
+    p{
+        font-weight: 600;
+    }
+
+    .size__btn {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        margin: .3em;
+        border: 1px solid #ccc;
+        background: #f8f8f8;
+        cursor: pointer;
+    }
+}
+
+.product__modal__window__quantity{
+    p{
+        font-weight: 600;
+    }
+}
+
+.product__modal__window__cta{
+    button{
+        border-radius: 8px;
+        width: 100%;
+    }
+
+    a{
+        width: 40px;
+        border-radius: 8px;
+        border: 1.5px solid var(--black-clr);
+        color: var(--black-clr);
+        @include a.centerPage;
+    }
+}
+
+.close__modal__window{
+    font-size: 2.5rem;
+    cursor: pointer;
+}
+
+@media (max-width: 767px) {
+    .product__modal__window{
+        overflow-y: auto;
+        flex-direction: column;
+        height: 500px;
+    }
+
+    .product__card__img{
+        order: 1;
+    }
+
+    .product__modal__window__icon{
+        order: 2;
+        align-self: flex-end;
+    }
+
+    .product__modal__window__content{
+        order: 3;
+        margin-block: -1em 1em;
+    }
+}
