@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign In</title>
+    <title>Sign In | Auclo</title>
     <link rel="stylesheet" href="../../dist/css/style.css">
     <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
     <link rel="stylesheet" type="text/css" href="../../dist/css/lightslider.css">
@@ -23,14 +23,14 @@
                     <a href="#" class="nav-link icon-link"><i class='bx bx-search'></i></a>
                     <div class="nav-link icon-link position-relative">
                         <i class='bx bx-shopping-bag cart__icon'></i>
-                        <span class="badge position-absolute translate-middle rounded-pill">1</span>
+                        <span class="badge position-absolute translate-middle rounded-pill">0</span>
                     </div>     
                 </div>
     
                 <!-- ========== DESKTOP MENU ==========-->
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav mx-auto">
-                        <li class="nav-item"><a href="../../index.html" class="nav-link active">Home</a></li>
+                        <li class="nav-item"><a href="../../index.html" class="nav-link">Home</a></li>
                         <li class="nav-item dropdown">
                             <a href="#" class="nav-link" data-bs-toggle="dropdown">Watches <i class='bx bxs-down-arrow'></i></a>
                             <ul class="dropdown-menu">
@@ -61,7 +61,7 @@
                     <li class="nav-item position-relative">
                         <div class="nav-link">
                             <i class='bx bx-shopping-bag cart__icon'></i>
-                            <span class="badge position-absolute translate-middle rounded-pill">1</span>
+                            <span class="badge position-absolute translate-middle rounded-pill">0</span>
                         </div>
                     </li>
                     <li class="nav-item"><a href="#" class="nav-link"><i class='bx bx-heart'></i></a></li>
@@ -74,38 +74,39 @@
     <section class="sign__in">
         <div class="container sign__in__container">
             <div class="sign__in__content">
-                <h2 class="text-center">Sign in</h2>
-                <div class="row mt-5">
-                    <div class="col-lg-6 sign__in__form">
-                        <label><input type="email" placeholder="Enter your email" required></label>
-                        <label><input type="password" placeholder="Enter your password" required></label>
-                        <div class="d-flex">
+                <div class="row d-flex justify-content-between align-items-center mt-5 gap-5">
+                    <div class="col-lg-5 sign__in__form">
+                        <h2 class="mb-3">Sign in</h2>
+                        <div class="inputs">
+                            <label class="mb-3"><input type="email" placeholder="Enter your email" required></label>
+                            <label><input type="password" placeholder="Enter your password" required></label>
+                        </div>
+                        <button type="submit" class="btn btn-dark w-100 mt-5">Sign in</button>
+                        <div class="d-flex justify-content-between mt-3">
                             <div>
-                                <input type="checkbox" id="check-password">
+                                <input type="checkbox" id="check-password" class="me-1">
                                 <label for="check-password" class="text">Remember me</label>
                             </div>
                             <a href="#">Forgot password?</a>  
                         </div>
                     </div>
                     <div class="col-lg-6 new__account__form">
-                        <h5>New Customer?</h5>
-                        <p>Create an account with us and you'll be able to:</p>
+                        <h2>New Customer?</h2>
+                        <p>Create an account with us and enjoy exclusive benefits!</p>
                         <ul>
-                            <li>Check out faster</li>
-                            <li>Save multiple shipping addresses</li>
-                            <li>Access your order history</li>
-                            <li>Track new orders</li>
-                            <li>Save items to your wishlist</li>
+                            <li>Faster Checkout – Save your details for a seamless shopping experience.</li>
+                            <li>Exclusive Offers – Get early access to sales, promotions, and special discounts.</li>
+                            <li>Order Tracking – Easily track your orders and view purchase history.</li>
+                            <li>Personalized Recommendations – Discover watches that match your style.</li>
+                            <li>Wishlist & Favorites – Save your favorite timepieces for later.</li>
+                            <li>Hassle-Free Returns – Enjoy a smooth return and exchange process.</li>
                         </ul>
-                        <a href="#" class="cta text-decoration-none">Create an account</a>
+                        <a href="#" class="btn btn-dark w-100 text-decoration-none mt-4">Create an account</a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
-    
-
 
     <footer class="footer">
         <div class="container footer__container">
@@ -120,7 +121,7 @@
                         </label>
                     </div>
                     <ul class="footer__icons list-unstyled mt-3 d-flex">
-                        <li class="footer__item">
+                        <li class="footer__item ms-0">
                             <a href="#" class="footer__link text-decoration-none"><i class='bx bxl-instagram'></i></a>
                         </li>
                         <li class="footer__item">
@@ -194,19 +195,17 @@
                     <small> &copy; 2025 Jennifer Cortez Herrera | Icons by <a target="_blank" href="https://icons8.com">Icons8</a></small>
                 </div>
                 <div class="payment__methods col-auto">
-                    <img src="../../assets/img/icons8-amex-48.png" alt="">
+                    <img src="../../assets/img/icons8-amex-48.png" alt="" class="ms-0">
                     <img src="../../assets/img/icons8-apple-pay-48.png" alt="">
                     <img src="../../assets/img/icons8-google-pay-48.png" alt="">
                     <img src="../../assets/img/icons8-mastercard-logo-48.png" alt="">
                     <img src="../../assets/img/icons8-paypal-48.png" alt="">
-                    <img src="../../assets/img/icons8-visa-48.png" alt="">
+                    <img src="../../assets/img/icons8-visa-48.png" alt="" class="ms-0">
                 </div>
             </div>
         </div>
     </footer>
-
-
-
+    
       <!-- CART MENU -->
     <div class="cart mt-5">
         <h2 class="text-center">Your Bag</h2>

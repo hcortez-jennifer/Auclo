@@ -34,6 +34,7 @@ window.addEventListener('scroll', () => {
     }
 });
 
+
 // SLIDER
 $(document).ready(function() {
     $('#autoWidth').lightSlider({
@@ -61,7 +62,6 @@ closeModals.forEach((closeModal, index) => {
 });
 
 
-
 // CART MENU
 let cartIcons = document.querySelectorAll('.cart__icon'); 
 let cart = document.querySelector('.cart'); 
@@ -73,3 +73,40 @@ cartIcons.forEach(cartIcon => {
 
 closeCart.addEventListener('click', () => cart.classList.remove('active')); 
 
+
+// FILTER PRODUCTS
+document.addEventListener("DOMContentLoaded", function () {
+    const sortOptions = document.querySelector("#sortOptions");
+    const productContainer = document.querySelector(".product__container"); 
+    const products = Array.from(document.querySelectorAll(".product__item")); 
+
+    function parsePrice(priceText) {
+        return parseFloat(priceText.replace(/,/g, "").replace("$", "")); 
+    }
+
+    sortOptions.addEventListener("change", () => {
+        let selectedOption = sortOptions.value;
+        let sortedProducts = [...products];
+
+        if (selectedOption === "priceAsc") {
+            sortedProducts.sort((a, b) => 
+                parsePrice(a.querySelector(".price").textContent) - parsePrice(b.querySelector(".price").textContent)
+            ); 
+        } else if (selectedOption === "priceDesc") {
+            sortedProducts.sort((a, b) => 
+                parsePrice(b.querySelector(".price").textContent) - parsePrice(a.querySelector(".price").textContent)
+            ); 
+        } else if (selectedOption === "nameAsc") {
+            sortedProducts.sort((a, b) => 
+                a.querySelector(".product__card__body__title").textContent.localeCompare(b.querySelector(".product__card__body__title").textContent)
+            );
+        } else if (selectedOption === "nameDesc") {
+            sortedProducts.sort((a, b) => 
+                b.querySelector(".product__card__body__title").textContent.localeCompare(a.querySelector(".product__card__body__title").textContent)
+            ); 
+        }
+
+        productContainer.innerHTML = ""; 
+        sortedProducts.forEach(product => productContainer.appendChild(product));
+    });
+});

@@ -153,18 +153,8 @@
         flex-direction: column-reverse;
     }
 
-    .customization__details{
-        .cta{
-            margin-top: 2em;
-            border: none;
-    
-            &:hover{
-                background-color: var(--primary-dark-clr);
-            }
-        }
-    }
-
     img{
         border-radius: 12px;
+        box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
     }
 }
