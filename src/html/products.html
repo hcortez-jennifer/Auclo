@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Auclo Products</title>
+    <title>Shop All Watches | Auclo</title>
     <link rel="stylesheet" href="../../dist/css/style.css">
     <link rel="stylesheet"
   href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
@@ -24,16 +24,16 @@
                     <a href="#" class="nav-link icon-link"><i class='bx bx-search'></i></a>
                     <div class="nav-link icon-link position-relative">
                         <i class='bx bx-shopping-bag cart__icon'></i>
-                        <span class="badge position-absolute translate-middle rounded-pill">1</span>
+                        <span class="badge position-absolute translate-middle rounded-pill">0</span>
                     </div>     
                 </div>
     
                 <!-- ========== DESKTOP MENU ==========-->
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav mx-auto">
-                        <li class="nav-item"><a href="../../index.html" class="nav-link active">Home</a></li>
+                        <li class="nav-item"><a href="../../index.html" class="nav-link">Home</a></li>
                         <li class="nav-item dropdown">
-                            <a href="#" class="nav-link" data-bs-toggle="dropdown">Watches <i class='bx bxs-down-arrow'></i></a>
+                            <a href="#" class="nav-link active" data-bs-toggle="dropdown">Watches <i class='bx bxs-down-arrow'></i></a>
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" href="#">New Arrivals</a></li>
                                 <li><a class="dropdown-item" href="#">Best Sellers</a></li>
@@ -62,7 +62,7 @@
                     <li class="nav-item position-relative">
                         <div class="nav-link">
                             <i class='bx bx-shopping-bag cart__icon'></i>
-                            <span class="badge position-absolute translate-middle rounded-pill">1</span>
+                            <span class="badge position-absolute translate-middle rounded-pill">0</span>
                         </div>
                     </li>
                     <li class="nav-item"><a href="#" class="nav-link"><i class='bx bx-heart'></i></a></li>
@@ -74,14 +74,29 @@
 
     <section class="navigation">
         <div class="container">
-            <p><a href="../../index.html" class="text-decoration-none"><span class="product__nav">Home</a> /</span> <span class="bold"> Watches</span> </p>
+            <p><a href="../../index.html" class="text-decoration-none"><span class="product__nav grey__clr">Home</a> /</span> <span class="bold colo"> Watches</span> </p>
         </div>
     </section>
 
     <section class="best__sellers product__list">
         <div class="container best__sellers__container product__list__container mt-5">  
-            <div class="row row-gap-5">
-                <div class="col-lg-4 col-md-6">
+            <div class="row justify-content-between align-items-center gap-3 mb-5">
+                <div class="col-auto">
+                    <h5 class="mb-0">Watches <span class="grey__clr">(10,642 products)</span></h5>
+                </div>
+                <div class="col-auto">
+                    <label for="sortOptions" class="me-1">Sort by:</label>
+                    <select id="sortOptions" >
+                        <option value="bestSelling">Best Selling</option>
+                        <option value="priceAsc">Price: Low to High</option>
+                        <option value="priceDesc">Price: High to Low</option>
+                        <option value="nameAsc">Name: A-Z</option>
+                        <option value="nameDesc">Name: Z-A</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row row-gap-5 product__container">
+                <div class="col-lg-4 col-md-6 product__item" data-price="450" data-name="Aureate">
                     <div class="product__card">
                         <div class="product__card__img text-center">
                             <img src="../../assets/img/watch4.png" class="img-fluid" alt="">
@@ -92,13 +107,13 @@
                             </div>
                         </div>
                         <div class="product__card__body text-center">
-                            <h4>Aureate</h4>
+                            <h4 class="product__card__body__title">Aureate</h4>
                             <p class="product__card__body__details">A refined gold watch with a brown leather strap, perfect for classic elegance.</p>
                             <p class="price">$450.00</p>
                         </div>
                     </div> 
                 </div>
-                <div class="col-lg-4 col-md-6">
+                <div class="col-lg-4 col-md-6 product__item" data-price="10,318" data-name="Onyx">
                     <div class="product__card">
                         <div class="product__card__img text-center">
                             <img src="../../assets/img/watch9.png" class="img-fluid" alt="">
@@ -109,13 +124,13 @@
                             </div>
                         </div>
                         <div class="product__card__body text-center">
-                            <h4>Onyx Prime</h4>
+                            <h4 class="product__card__body__title">Onyx Prime</h4>
                             <p class="product__card__body__details">A sophisticated silver watch with a bold black face, perfect for timeless elegance.</p>
                             <p class="price">$10,318.00</p>
                         </div>
                     </div> 
                 </div>
-                <div class="col-lg-4 col-md-6">
+                <div class="col-lg-4 col-md-6 product__item" data-price="525" data-name="Celestial">
                     <div class="product__card">
                         <div class="product__card__img text-center">
                             <img src="../../assets/img/watch8.png" class="img-fluid" alt="">
@@ -126,13 +141,13 @@
                             </div>
                         </div>
                         <div class="product__card__body text-center">
-                            <h4>Celestial Luxe</h4>
+                            <h4 class="product__card__body__title">Celestial Luxe</h4>
                             <p class="product__card__body__details">A royal blue and rose gold watch that combines luxury with modern sophistication.</p>
                             <p class="price">$525.00</p>
                         </div>
                     </div> 
                 </div>
-                <div class="col-lg-4 col-md-6">
+                <div class="col-lg-4 col-md-6 product__item" data-price="7,345" data-name="Titan">
                     <div class="product__card">
                         <div class="product__card__img text-center">
                             <img src="../../assets/img/watch2.png" class="img-fluid" alt="">
@@ -143,13 +158,13 @@
                             </div>
                         </div>
                         <div class="product__card__body text-center">
-                            <h4>Titan Black</h4>
+                            <h4 class="product__card__body__title">Titan Black</h4>
                             <p class="product__card__body__details">Black leather strap and matching dial for a sharp, minimalist look.</p>
                             <p class="price">$7,345.00</p>
                         </div>
                     </div> 
                 </div>
-                <div class="col-lg-4 col-md-6">
+                <div class="col-lg-4 col-md-6 product__item" data-price="54,125" data-name="Oax">
                     <div class="product__card">
                         <div class="product__card__img text-center">
                             <img src="../../assets/img/watch10.png" class="img-fluid" alt="">
@@ -160,13 +175,13 @@
                             </div>
                         </div>
                         <div class="product__card__body text-center">
-                            <h4>OAX-gold</h4>
+                            <h4 class="product__card__body__title">OAX-gold</h4>
                             <p class="product__card__body__details">A radiant gold timepiece adorned with diamonds, embodying prestige.</p>
                             <p class="price">$54,125.00</p>
                         </div>
                     </div> 
                 </div>
-                <div class="col-lg-4 col-md-6">
+                <div class="col-lg-4 col-md-6 product__item" data-price="379" data-name="Horlogerie">
                     <div class="product__card">
                         <div class="product__card__img text-center">
                             <img src="../../assets/img/watch1.png" class="img-fluid" alt="">
@@ -177,13 +192,13 @@
                             </div>
                         </div>
                         <div class="product__card__body text-center">
-                            <h4>Horlogerie</h4>
+                            <h4 class="product__card__body__title">Horlogerie</h4>
                             <p class="product__card__body__details">Brown leather watch with silver bezel and rose gold hands, perfect for any occasion.</p>
                             <p class="price">$379.00</p>
                         </div>
                     </div> 
                 </div>
-                <div class="col-lg-4 col-md-6">
+                <div class="col-lg-4 col-md-6 product__item" data-price="140" data-name="Moonstone">
                     <div class="product__card">
                         <div class="product__card__img text-center">
                             <img src="../../assets/img/watch3.png" class="img-fluid" alt="">
@@ -194,13 +209,13 @@
                             </div>
                         </div>
                         <div class="product__card__body text-center">
-                            <h4>Moonstone-TIX</h4>
+                            <h4 class="product__card__body__title">Moonstone-TIX</h4>
                             <p class="product__card__body__details">Sleek and modern timepiece featuring a stunning marble dial.</p>
                             <p class="price">$140.00</p>
                         </div>
                     </div> 
                 </div>
-                <div class="col-lg-4 col-md-6">
+                <div class="col-lg-4 col-md-6 product__item" data-price="7,999" data-name="Velvet">
                     <div class="product__card">
                         <div class="product__card__img text-center">
                             <img src="../../assets/img/watch12.png" class="img-fluid" alt="">
@@ -211,13 +226,13 @@
                             </div>
                         </div>
                         <div class="product__card__body text-center">
-                            <h4>Velvet Ash</h4>
+                            <h4 class="product__card__body__title">Velvet Ash</h4>
                             <p class="product__card__body__details">Blending a sleek silver case, a deep black dial, and a vintage brown leather strap.</p>
                             <p class="price">$7,999.00</p>
                         </div>
                     </div> 
                 </div>
-                <div class="col-lg-4 col-md-6">
+                <div class="col-lg-4 col-md-6 product__item" data-price="2,541" data-name="Celestial">
                     <div class="product__card">
                         <div class="product__card__img text-center">
                             <img src="../../assets/img/watch5.png" class="img-fluid" alt="">
@@ -228,13 +243,13 @@
                             </div>
                         </div>
                         <div class="product__card__body text-center">
-                            <h4>Celestial Chrono</h4>
+                            <h4 class="product__card__body__title">Celestial Chrono</h4>
                             <p class="product__card__body__details">A bold silver watch with a stunning royal blue dial for a distinguished look.</p>
                             <p class="price">$2,541.00</p>
                         </div>
                     </div> 
                 </div>
-                <div class="col-lg-4 col-md-6">
+                <div class="col-lg-4 col-md-6 product__item" data-price="2,350" data-name="G">
                     <div class="product__card">
                         <div class="product__card__img text-center">
                             <img src="../../assets/img/watch11.png" class="img-fluid" alt="">
@@ -245,13 +260,13 @@
                             </div>
                         </div>
                         <div class="product__card__body text-center">
-                            <h4>G&S Blaro</h4>
+                            <h4 class="product__card__body__title">G&S Blaro</h4>
                             <p class="product__card__body__details">Contemporary minimalism with warm rose gold tones, creating a striking presence.</p>
                             <p class="price">$2,350.00</p>
                         </div>
                     </div> 
                 </div>
-                <div class="col-lg-4 col-md-6">
+                <div class="col-lg-4 col-md-6 product__item" data-price="431" data-name="Nautilus">
                     <div class="product__card">
                         <div class="product__card__img text-center">
                             <img src="../../assets/img/watch7.png" class="img-fluid" alt="">
@@ -262,13 +277,13 @@
                             </div>
                         </div>
                         <div class="product__card__body text-center">
-                            <h4>Nautilus</h4>
+                            <h4 class="product__card__body__title">Nautilus</h4>
                             <p class="product__card__body__details">A sophisticated silver watch with a royal blue leather strap, ideal for everyday elegance.</p>
                             <p class="price">$431.00</p>
                         </div>
                     </div> 
                 </div>
-                <div class="col-lg-4 col-md-6">
+                <div class="col-lg-4 col-md-6 product__item" data-price="5,960" data-name="Oax">
                     <div class="product__card">
                         <div class="product__card__img text-center">
                             <img src="../../assets/img/watch6.png" class="img-fluid" alt="">
@@ -279,7 +294,7 @@
                             </div>
                         </div>
                         <div class="product__card__body text-center">
-                            <h4>OAX-rose</h4>
+                            <h4 class="product__card__body__title">OAX-rose</h4>
                             <p class="product__card__body__details">Rose gold watch with diamond-engraved bezel, exuding timeless elegance.</p>
                             <p class="price">$5,960.00</p>
                         </div>
@@ -293,7 +308,7 @@
                       <span aria-hidden="true">&laquo;</span>
                     </a>
                   </li>
-                  <li class="page-item"><a class="page-link page__link__active" href="#">1</a></li>
+                  <li class="page-item"><a class="page-link active page__link__active" href="#">1</a></li>
                   <li class="page-item"><a class="page-link" href="#">2</a></li>
                   <li class="page-item"><a class="page-link" href="#">3</a></li>
                   <li class="page-item">
@@ -305,26 +320,6 @@
             </nav>
         </div>
     </section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
 
     <footer class="footer">
         <div class="container footer__container">

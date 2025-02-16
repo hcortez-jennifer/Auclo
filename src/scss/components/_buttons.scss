@@ -16,3 +16,13 @@
         width: 60%;
     }
 }
+
+.secondary__cta{
+    @include a.ctaButton;
+    border: none;
+    margin-top: 2em;
+    
+    &:hover{
+        background-color: var(--primary-dark-clr);
+    }
+}

@@ -1,10 +1,29 @@
-.navigation .container{
-    span{
-        color: var(--grey-clr);
-    }
+.grey__clr{
+    color: var(--grey-clr);
+    font-size: 1rem;
+}
 
+.navigation .container{
     .bold{
         font-weight: 600;
         color: var(--black-clr);
+    }
+}
+
+#sortOptions{
+    border: 1px solid #ccc;
+    padding: 8px;
+    border-radius: 4px;
+}
+
+.pagination{
+    a{
+        color: var(--black-clr); 
+    }
+
+    .page__link__active{
+        background-color: var(--black-clr);
+        color: var(--white-clr);
+        border-color: var(--black-clr);
     }
 }

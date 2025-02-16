@@ -11906,6 +11906,24 @@ h5 {
   width: 60%;
 }
 
+.secondary__cta {
+  position: relative;
+  display: inline-block;
+  margin-top: 3em;
+  padding: 1em 2em;
+  font-weight: 600;
+  color: white;
+  background-color: black;
+  border: 1.5px solid var(--primary-dark-clr);
+  border-radius: 5px;
+  transition: background-color 0.7s ease;
+  border: none;
+  margin-top: 2em;
+}
+.secondary__cta:hover {
+  background-color: var(--primary-dark-clr);
+}
+
 .cart {
   position: fixed;
   top: 0;
@@ -12158,6 +12176,7 @@ h5 {
   margin: 0.3em;
   border: 1px solid #ccc;
   background: #f8f8f8;
+  text-align: center;
   cursor: pointer;
 }
 
@@ -12457,23 +12476,60 @@ h5 {
     flex-direction: column-reverse;
   }
 }
-.customization__content .customization__details .cta {
-  margin-top: 2em;
-  border: none;
-}
-.customization__content .customization__details .cta:hover {
-  background-color: var(--primary-dark-clr);
-}
 .customization__content img {
   border-radius: 12px;
+  box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
 }
 
-.navigation .container span {
+.grey__clr {
   color: var(--grey-clr);
+  font-size: 1rem;
 }
+
 .navigation .container .bold {
   font-weight: 600;
   color: var(--black-clr);
+}
+
+#sortOptions {
+  border: 1px solid #ccc;
+  padding: 8px;
+  border-radius: 4px;
+}
+
+.pagination a {
+  color: var(--black-clr);
+}
+.pagination .page__link__active {
+  background-color: var(--black-clr);
+  color: var(--white-clr);
+  border-color: var(--black-clr);
+}
+
+.sign__in__form button {
+  padding: 1em 2em;
+}
+
+.new__account__form {
+  background-color: #ccc;
+  padding: 2em;
+}
+.new__account__form p {
+  font-weight: 600;
+}
+.new__account__form a {
+  padding: 1em 2em;
+}
+
+.sign__in__form .inputs label {
+  width: 100%;
+  border-bottom: 1.5px solid var(--black-clr);
+}
+.sign__in__form .inputs label input {
+  width: 100%;
+  border: none;
+  outline: none;
+  padding-block: 0.5em;
 }
 
 .container {

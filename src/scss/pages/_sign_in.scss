@@ -1,0 +1,30 @@
+.sign__in__form button{
+    padding: 1em 2em;
+}
+
+.new__account__form{
+    background-color: #ccc;
+    padding: 2em;
+
+    p{
+        font-weight: 600;
+    }
+
+    a{
+        padding: 1em 2em;
+    }
+}
+
+.sign__in__form .inputs{
+    label{
+        width: 100%;
+        border-bottom: 1.5px solid var(--black-clr);
+
+        input{
+            width: 100%;
+            border: none;
+            outline: none;
+            padding-block: .5em;
+        }
+    }    
+}

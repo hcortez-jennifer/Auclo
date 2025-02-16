@@ -1,2 +1,2 @@
 # Auclo
-[Live demo](https://github.com/hcortez-jennifer/Auclo/)
+[Live demo](https://hcortez-jennifer.github.io/Auclo/)
