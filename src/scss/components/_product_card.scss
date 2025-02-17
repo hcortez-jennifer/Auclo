@@ -21,6 +21,16 @@
         border-top-right-radius: 12px;
         padding-block: 2em;
         overflow: hidden;
+
+        .discount{
+            position: absolute;
+            top: 5%;
+            left: 5%;
+            background-color: var(--black-clr);
+            color: var(--white-clr);
+            border-radius: 8px;
+            padding: 0.5em 1em;
+        }
     }
 
     img{
@@ -50,13 +60,13 @@
         font-weight: 700;
     }
 
-    .product__card__body__details{
+    .product__card__body__details, s{
         color: var(--grey-clr);
     }
 
     .price{
         font-size: 1.2rem;
-        font-weight: 550;
+        font-weight: 600;
     }
 
     .bx-shopping-bag{
@@ -74,7 +84,7 @@
     }
 }
 
-.product__card__icons {
+.product__card__icons{
     position: absolute;
     top: 23%;
     right: -50px;
@@ -84,20 +94,20 @@
     gap: 10px;
     opacity: 0;
     transition: all 0.4s ease-in-out;
-}
 
-.product__card__icons a{
-    width: 40px;
-    height: 40px;
-    @include a.centerPage;
-    border-radius: 50%;
-    background: var(--black-clr);
-    color: var(--white-clr);
-    transition: all 0.3s ease;
-    
-    &:hover{
-        background-color: transparent;
-        border: 1.5px solid var(--black-clr);
-        color: var(--black-clr);
+    a{
+        width: 40px;
+        height: 40px;
+        @include a.centerPage;
+        border-radius: 50%;
+        background: var(--black-clr);
+        color: var(--white-clr);
+        transition: all 0.3s ease;
+        
+        &:hover{
+            background-color: transparent;
+            border: 1.5px solid var(--black-clr);
+            color: var(--black-clr);
+        }
     }
 }
