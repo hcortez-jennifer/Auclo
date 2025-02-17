@@ -12183,6 +12183,11 @@ h5 {
   text-align: center;
   cursor: pointer;
 }
+.product__modal__window__size .size__btn.active {
+  background: black;
+  color: white;
+  border: 1px solid black;
+}
 
 .product__modal__window__quantity p {
   font-weight: 600;
@@ -12493,6 +12498,10 @@ h5 {
   box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
 }
 
+.related__products__container .product__card__body {
+  padding-bottom: 0em;
+}
+
 .grey__clr {
   color: var(--grey-clr);
   font-size: 1rem;
@@ -12554,7 +12563,7 @@ h5 {
   }
 }
 
-section:not(.hero, .product__list, .product__modal__windows) {
+section:not(.hero, .product__list, .product__modal__windows, .product__detail) {
   margin-top: 7em;
 }
 
