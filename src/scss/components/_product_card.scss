@@ -95,7 +95,7 @@
     opacity: 0;
     transition: all 0.4s ease-in-out;
 
-    a{
+    a, i{
         width: 40px;
         height: 40px;
         @include a.centerPage;
@@ -103,6 +103,7 @@
         background: var(--black-clr);
         color: var(--white-clr);
         transition: all 0.3s ease;
+        cursor: pointer;
         
         &:hover{
             background-color: transparent;

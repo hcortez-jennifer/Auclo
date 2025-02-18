@@ -1,3 +1,25 @@
-.related__products__container .product__card__body{
-    padding-bottom: 0em;
+.product__detail__content{ 
+    @media (max-width: 767px) {
+        flex-direction: column;
+    }
+
+    .product__modal__window__content{
+        margin-top: 1.5em;
+    }
+
+    h4{
+        font-size: 2rem;
+    }
+
+    .product__modal__window__price{
+        font-size: 1.45rem;
+    }    
+
+    .bold{
+        font-weight: 600;
+    }
+}
+
+.related__products{
+    margin-top: 7em;
 }

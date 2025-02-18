@@ -84,11 +84,11 @@
     </section>
 
     <section class="product__detail mt-5">
-        <div class="container product__detail__container d-flex justify-content-between">
-            <div>
-                <img src="../../assets/img/watch9.png" alt="">
-            </div>
-            <div class="row product__detail__info">
+        <div class="container product__detail__container">
+            <div class="product__detail__content d-flex gap-5">
+                <div class="product__card__img text-center">
+                    <img src="../../assets/img/watch9.png" alt="">
+                </div>
                 <div class="product__modal__window__content">
                     <div class="product__modal__window__header d-flex justify-content-between align-items-center">
                         <h4 class="mb-1">Onyx Prime</h4>
@@ -103,10 +103,10 @@
                             <p class="mb-0 product__modal__window__price">$10,318.00</p>
                             <s>$103,180.00</s>
                         </div>
-                        <p class="product__modal__window__details mt-2">A sophisticated silver watch with a bold black face, perfect for timeless elegance. The Onyx Silver watch is an embodiment of refined minimalism. Its brushed silver case, sleek black dial, and luminous silver hands make it a bold yet understated accessory for those who appreciate classic style. Whether paired with a business suit or a casual outfit, this watch delivers a sleek, confident look that never goes out of style. </p> 
+                        <p style="font-size: 1rem;" class="product__modal__window__details mt-2">A sophisticated silver watch with a bold black face, perfect for timeless elegance. The Onyx Silver watch is an embodiment of refined minimalism. Its brushed silver case, sleek black dial, and luminous silver hands make it a bold yet understated accessory for those who appreciate classic style. Whether paired with a business suit or a casual outfit, this watch delivers a sleek, confident look that never goes out of style.</p> 
                     </div>
     
-                    <div class="product__modal__window__size mb-2">
+                    <div class="product__modal__window__size my-4">
                         <p class="mb-1">Size: </p>
                         <button class="size__btn ms-0">S</button>
                         <button class="size__btn">M</button>
@@ -127,65 +127,72 @@
                         <button class="add__counter btn btn-dark border-0">Add to cart</button>
                         <a href="/src/html/sign_in.html" target="_blank"  class="text-decoration-none"><i class='bx bx-heart'></i></a>
                     </div>
-                </div>
 
-                <div class="accordion" id="accordionExample">
-                    <div class="accordion-item">
-                      <h2 class="accordion-header">
-                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                          Specifications
-                        </button>
-                      </h2>
-                      <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
-                        <div class="accordion-body">
-                          <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+
+                    <div class="accordion accordion-flush mt-4" id="accordionFlushExample">
+                        <div class="accordion-item">
+                          <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                              Specifications
+                            </button>
+                          </h2>
+                          <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                                <ul>
+                                    <li><span class="bold">Case Material:</span> Brushed stainless steel</li>
+                                    <li><span class="bold">Strap:</span> Stainless steel bracelet</li>
+                                    <li><span class="bold">Dial:</span> Black with luminous silver hands</li>
+                                    <li><span class="bold">Movement:</span> Quartz</li>
+                                    <li><span class="bold">Water Resistance:</span> 50m</li>
+                                </ul>
+                            </div>
+                          </div>
                         </div>
-                      </div>
-                    </div>
-                    <div class="accordion-item">
-                      <h2 class="accordion-header">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                          Shipping & Returns
-                        </button>
-                      </h2>
-                      <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                        <div class="accordion-body">
-                          <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                        <div class="accordion-item">
+                          <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                              Shipping & Returns
+                            </button>
+                          </h2>
+                          <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                                <div class="shipping">
+                                    <span class="bold">Shipping:</span>
+                                    <ul>
+                                        <li>Free Standard Shipping on all orders over $2,500</li>
+                                        <li>Express Shipping Available (1-3 business days)</li>
+                                        <li>Orders are processed within 24-48 hours</li>
+                                        <li>Tracking details will be provided once your order ships</li>
+                                    </ul>
+                                </div>
+                                <div class="returns">
+                                    <span class="bold">Returns & Exchanges:</span>
+                                    <ul>
+                                        <li>30-Day Return Policy – If you're not satisfied, return your watch in its original condition within 30 days for a refund or exchange</li>
+                                        <li>Warranty: Includes a 2-year manufacturer’s warranty for defects</li>
+                                        <li>Hassle-Free Returns: Easily process returns via our online portal</li>
+                                    </ul>
+                                </div>
+                            </div>
+                          </div>
                         </div>
-                      </div>
                     </div>
-                    <div class="accordion-item">
-                      <h2 class="accordion-header">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                          Accordion Item #3
-                        </button>
-                      </h2>
-                      <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                        <div class="accordion-body">
-                          <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                </div>
             </div>
         </div>
     </section>
 
-
-    <section class="related__products">
-        <div class="container related__products__container">
-            <div class="row d-flex justify-content-between">
-                <h5 class="mb-0">You may also like</h5>
-                <a href="#" class="mb-0">View more</a>
-            </div>
+    <section class="best__sellers product__list related__products">
+        <div class="container best__sellers__container product__list__container mt-5">  
+            <h5 class="mb-4">You may also like</h5>
             <div class="row row-gap-5 product__container">
-                <div class="col-lg-4 col-md-6 product__item" data-price="7,345" data-name="Titan">
+                <div class="col-lg-4 col-md-6 col-sm-6 product__item" data-price="7,345" data-name="Titan">
                     <div class="product__card">
                         <div class="product__card__img text-center">
                             <img src="../../assets/img/watch2.png" class="img-fluid" alt="">
                             <div class="product__card__icons">
                                 <a href="sign_in.html" target="_blank" class="text-decoration-none"><i class='bx bx-heart'></i></a>
-                                <a href="#" class="text-decoration-none"><i class='bx bx-shopping-bag'></i></a>
+                                <i class='bx bx-shopping-bag add__counter__icon'></i>
                                 <a href="#" class="text-decoration-none"><i class='bx bx-search'></i></a>
                             </div>
                         </div>
@@ -196,14 +203,14 @@
                         </div>
                     </div> 
                 </div>
-                <div class="col-lg-4 col-md-6 product__item" data-price="379" data-name="Horlogerie">
+                <div class="col-lg-4 col-md-6 col-sm-6 product__item" data-price="379" data-name="Horlogerie">
                     <div class="product__card">
                         <div class="product__card__img text-center">
                             <img src="../../assets/img/watch1.png" class="img-fluid" alt="">
                             <div class="discount text-uppercase">50% Off</div>
                             <div class="product__card__icons">
                                 <a href="sign_in.html" target="_blank"  class="text-decoration-none"><i class='bx bx-heart'></i></a>
-                                <a href="#" class="text-decoration-none"><i class='bx bx-shopping-bag'></i></a>
+                                <i class='bx bx-shopping-bag add__counter__icon'></i>
                                 <a href="#" class="text-decoration-none"><i class='bx bx-search'></i></a>
                             </div>
                         </div>
@@ -217,13 +224,13 @@
                         </div>
                     </div> 
                 </div>
-                <div class="col-lg-4 col-md-6 product__item" data-price="7,999" data-name="Velvet">
+                <div class="col-lg-4 col-md-6 col-sm-6 product__item" data-price="7,999" data-name="Velvet">
                     <div class="product__card">
                         <div class="product__card__img text-center">
                             <img src="../../assets/img/watch12.png" class="img-fluid" alt="">
                             <div class="product__card__icons">
                                 <a href="sign_in.html" target="_blank"  class="text-decoration-none"><i class='bx bx-heart'></i></a>
-                                <a href="#" class="text-decoration-none"><i class='bx bx-shopping-bag'></i></a>
+                                <i class='bx bx-shopping-bag add__counter__icon'></i>
                                 <a href="#" class="text-decoration-none"><i class='bx bx-search'></i></a>
                             </div>
                         </div>
@@ -235,13 +242,25 @@
                     </div> 
                 </div>
             </div>
+            <nav aria-label="Page navigation example" class="mt-5">
+                <ul class="pagination">
+                  <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Previous">
+                      <span aria-hidden="true">&laquo;</span>
+                    </a>
+                  </li>
+                  <li class="page-item"><a class="page-link active page__link__active" href="#">1</a></li>
+                  <li class="page-item"><a class="page-link" href="#">2</a></li>
+                  <li class="page-item"><a class="page-link" href="#">3</a></li>
+                  <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Next">
+                      <span aria-hidden="true">&raquo;</span>
+                    </a>
+                  </li>
+                </ul>
+            </nav>
         </div>
     </section>
-
-    
-
-
-
 
     <footer class="footer">
         <div class="container footer__container">
