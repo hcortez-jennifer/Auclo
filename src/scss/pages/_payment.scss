@@ -1,0 +1,24 @@
+.payment__content{
+    @media (max-width: 767px) {
+        flex-direction: column;
+    }
+}
+
+.checkout__form{
+    .form__group{
+        margin-bottom: 1em;
+    }
+
+    input:not(.radio){
+        width: 100%;
+        margin-top: .5em;
+        padding: .5em;
+        outline: none;
+    }
+
+    .payment__container{
+        .bxs-down-arrow{
+            font-size: 0.75rem;
+        }
+    }
+}

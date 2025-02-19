@@ -11941,7 +11941,7 @@ h5 {
   right: 0;
 }
 
-.cart__img {
+.cart__img, .payment__img {
   max-width: 100px;
   height: auto;
 }
@@ -11953,7 +11953,7 @@ h5 {
   font-family: "Ibarra Real Nova", serif;
 }
 
-.cart__quantity button {
+.cart__quantity button, .checkout__quantity button {
   width: 30px;
   height: 30px;
   border: none;
@@ -11961,7 +11961,7 @@ h5 {
   cursor: pointer;
 }
 
-.cart__total {
+.cart__total, .summary__total {
   font-weight: bold;
   font-size: 1.2rem;
 }
@@ -12183,6 +12183,11 @@ h5 {
   text-align: center;
   cursor: pointer;
 }
+.product__modal__window__size .size__btn.active {
+  background: black;
+  color: white;
+  border: 1px solid black;
+}
 
 .product__modal__window__quantity p {
   font-weight: 600;
@@ -12309,7 +12314,7 @@ h5 {
   opacity: 0;
   transition: all 0.4s ease-in-out;
 }
-.product__card__icons a {
+.product__card__icons a, .product__card__icons i {
   width: 40px;
   height: 40px;
   display: flex;
@@ -12319,8 +12324,9 @@ h5 {
   background: var(--black-clr);
   color: var(--white-clr);
   transition: all 0.3s ease;
+  cursor: pointer;
 }
-.product__card__icons a:hover {
+.product__card__icons a:hover, .product__card__icons i:hover {
   background-color: transparent;
   border: 1.5px solid var(--black-clr);
   color: var(--black-clr);
@@ -12329,7 +12335,7 @@ h5 {
 .hero {
   width: 100%;
   height: 100vh;
-  background-image: url("../../assets/img/hero_bg.png");
+  background-image: url("../../assets/img/hero_bg.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: left 50%;
@@ -12351,29 +12357,19 @@ h5 {
   }
 }
 
-.hero__container {
-  margin-top: 3em;
-}
-
 .hero__content {
   max-width: 50%;
   color: white;
 }
 @media (max-width: 565px) {
   .hero__content {
-    max-width: 80%;
-    margin-top: 27em;
-  }
-}
-@media (max-width: 500px) {
-  .hero__content {
     max-width: 100%;
-    margin-top: 25em;
+    margin-top: 20em;
   }
 }
 .hero__content h1 {
   font-family: "Ibarra Real Nova", serif;
-  line-height: 1.2;
+  line-height: 1.1;
   margin-bottom: 0.3em;
 }
 @media (max-width: 565px) {
@@ -12430,44 +12426,38 @@ h5 {
 }
 
 .about {
-  background-color: var(--black-clr);
+  background-image: linear-gradient(rgba(4, 9, 30, 0.5), rgba(4, 9, 30, 0.9)), url("../../assets/img/about.jpg");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
 }
 .about .about__content {
+  max-width: 50%;
+  min-height: 65vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
+  color: var(--white-clr);
   position: relative;
 }
-.about .about__info {
-  position: absolute;
-  width: 40%;
-  top: 50%;
-  left: 10%;
-  transform: translateY(-50%);
-  color: var(--white-clr);
+@media (max-width: 991px) {
+  .about .about__content {
+    max-width: 70%;
+  }
+}
+@media (max-width: 567px) {
+  .about .about__content {
+    max-width: 100%;
+  }
+}
+.about .about__content .about__info {
   background: rgba(0, 0, 0, 0.6);
   padding: 2.5em;
   border-radius: 12px;
 }
-.about .about__info h2 {
+.about .about__content .about__info h2 {
   color: var(--primary-dark-clr);
   margin-bottom: 0.5em;
-}
-@media (max-width: 992px) {
-  .about .about__info {
-    width: 60%;
-    left: 0;
-  }
-}
-@media (max-width: 767px) {
-  .about .about__info {
-    position: relative;
-    width: 90%;
-    left: 0;
-    top: auto;
-    transform: none;
-  }
 }
 
 .best__sellers .product__card {
@@ -12493,6 +12483,28 @@ h5 {
   box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
 }
 
+@media (max-width: 767px) {
+  .product__detail__content {
+    flex-direction: column;
+  }
+}
+.product__detail__content .product__modal__window__content {
+  margin-top: 1.5em;
+}
+.product__detail__content h4 {
+  font-size: 2rem;
+}
+.product__detail__content .product__modal__window__price {
+  font-size: 1.45rem;
+}
+.product__detail__content .bold {
+  font-weight: 600;
+}
+
+.related__products {
+  margin-top: 7em;
+}
+
 .grey__clr {
   color: var(--grey-clr);
   font-size: 1rem;
@@ -12516,6 +12528,71 @@ h5 {
   background-color: var(--black-clr);
   color: var(--white-clr);
   border-color: var(--black-clr);
+}
+
+.num__items {
+  font-size: 1.2rem;
+  font-weight: normal;
+}
+
+@media (max-width: 767px) {
+  .checkout__content {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 479px) {
+  .checkout__content__container .checkout__categories p:nth-of-type(2) {
+    display: none;
+  }
+}
+.checkout__content__container .checkout__item .checkout__img__container {
+  background-color: var(--secondary-clr);
+  border-radius: 12px;
+}
+.checkout__content__container .checkout__item .checkout__img__container .checkout__img {
+  max-width: 150px;
+  height: auto;
+}
+.checkout__content__container .checkout__item h4 {
+  font-family: "Ibarra Real Nova", serif;
+}
+@media (max-width: 479px) {
+  .checkout__content__container .checkout__item .right {
+    display: none;
+  }
+}
+.checkout__content__container .checkout__item .remove__item {
+  cursor: pointer;
+}
+
+.order__summary__content__container {
+  background-color: #ccc;
+  padding: 2em;
+}
+@media (max-width: 767px) {
+  .order__summary__content__container {
+    margin-top: 3em;
+  }
+}
+
+@media (max-width: 767px) {
+  .payment__content {
+    flex-direction: column;
+  }
+}
+
+.checkout__form .form__group {
+  margin-bottom: 1em;
+}
+.checkout__form input:not(.radio) {
+  width: 100%;
+  margin-top: 0.5em;
+  padding: 0.5em;
+  outline: none;
+}
+.checkout__form .payment__container .bxs-down-arrow {
+  font-size: 0.75rem;
 }
 
 .sign__in__form button {
@@ -12554,7 +12631,7 @@ h5 {
   }
 }
 
-section:not(.hero, .product__list, .product__modal__windows) {
+section:not(.hero, .product__list, .product__modal__windows, .product__detail) {
   margin-top: 7em;
 }
 

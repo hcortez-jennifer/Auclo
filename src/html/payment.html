@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout | Auclo</title>
+    <link rel="stylesheet" href="../../dist/css/style.css">
+    <link rel="stylesheet"
+  href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" type="text/css" href="../../dist/css/style.css">
+    <script type="text/javascript" src="../js/Jquery.js"></script>
+    <script type="text/javascript" src="../js/lightslider.js"></script>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg fixed-top">
+            <div class="container">
+                <!-- ========== MOBILE Menu ==========-->
+                <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <a href="../../index.html" class="navbar-brand">Auclo</a>
+                <div class="navbar-icons d-lg-none">
+                    <a href="#" class="nav-link icon-link"><i class='bx bx-search'></i></a>
+                    <div class="nav-link icon-link position-relative">
+                        <i class='bx bx-shopping-bag cart__icon'></i>
+                        <span class="badge position-absolute translate-middle rounded-pill">0</span>
+                    </div>     
+                </div>
+    
+                <!-- ========== DESKTOP MENU ==========-->
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item"><a href="../../index.html" class="nav-link">Home</a></li>
+                        <li class="nav-item dropdown">
+                            <a href="#" class="nav-link" data-bs-toggle="dropdown">Watches <i class='bx bxs-down-arrow'></i></a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">New Arrivals</a></li>
+                                <li><a class="dropdown-item" href="#">Best Sellers</a></li>
+                                <li><a class="dropdown-item" href="#">Women's Watches</a></li>
+                                <li><a class="dropdown-item" href="#">Men's Watches</a></li>
+                                <li><a class="dropdown-item" href="products.html">View All</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a href="#" class="nav-link" data-bs-toggle="dropdown">Collections <i class='bx bxs-down-arrow'></i></a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Eterna Collection</a></li>
+                                <li><a class="dropdown-item" href="#">AeroTech Collection</a></li>
+                                <li><a class="dropdown-item" href="#">ChronoX Collection</a></li>
+                                <li><a class="dropdown-item" href="#">Noir Collection</a></li>
+                                <li><a class="dropdown-item" href="#">View All</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a href="#" class="nav-link">Straps</a></li>
+                        <li class="nav-item d-lg-none"><a href="#" class="nav-link">Sign In</a></li>
+                        <li class="nav-item d-lg-none"><a href="#" class="nav-link">Log In</a></li>
+                    </ul>
+                </div>
+                <ul class="navbar-nav d-none d-lg-flex">
+                    <li class="nav-item"><a href="#" class="nav-link"><i class='bx bx-search'></i></a></li>
+                    <li class="nav-item position-relative">
+                        <div class="nav-link">
+                            <i class='bx bx-shopping-bag cart__icon'></i>
+                            <span class="badge position-absolute translate-middle rounded-pill">0</span>
+                        </div>
+                    </li>
+                    <li class="nav-item"><a href="#" class="nav-link"><i class='bx bx-heart'></i></a></li>
+                    <li class="nav-item"><a href="sign_in.html" class="nav-link"><i class='bx bx-user'></i></a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <section class="checkout payment">
+        <div class="container payment__container">
+            <div class="payment__content d-flex justify-content-between">
+                <div class="payment__content__container col-lg-7">
+                    <h2>Checkout</h2>
+                    <form action="confirmation.html" class="checkout__form">
+                        <div class="shipping__container">
+                            <h5 class="border-bottom pb-2 mt-3">Shipping</h5>
+                            <div class="form__group">
+                                <label for="">Email <span class="text-danger">*</span></label>
+                                <input type="email" placeholder="johndoe@gmail.com" required>
+                            </div>
+                            <div class="form__group d-flex justify-content-between gap-4">
+                                <div class="input__group">
+                                    <label for="">First Name <span class="text-danger">*</span></label>
+                                    <input type="text" placeholder="John" required>
+                                </div>
+                                <div class="input__group">
+                                    <label for="">Last Name <span class="text-danger">*</span></label>
+                                    <input type="text" placeholder="Doe" required>
+                                </div>
+                            </div>
+                            <div class="form__group">
+                                <label for="">Address <span class="text-danger">*</span></label>
+                                <input type="text" placeholder="Address" required>
+                            </div>
+                            <div class="form__group d-flex justify-content-between gap-4">
+                                <div class="input__group">
+                                    <label for="">City <span class="text-danger">*</span></label>
+                                    <input type="text" placeholder="City" required>
+                                </div>
+                                <div class="input__group">
+                                    <label for="">State <span class="text-danger">*</span></label>
+                                    <input type="text" placeholder="State" required>
+                                </div>
+                                <div class="input__group">
+                                    <label for="">Zip Code <span class="text-danger">*</span></label>
+                                    <input type="text" placeholder="12345" pattern="[0-9]{5}" required>
+                                </div>
+                            </div>
+                            <div class="form__group">
+                                <label for="">Phone Number <span class="text-danger">*</span></label>
+                                <input type="tel" placeholder="1234567890" pattern="[0-9]{10}" required>
+                            </div>
+                        </div>
+                        <div class="payment">
+                            <h5 class="border-bottom pb-2 mt-5">Payment</h5>
+                            <div class="payment__container">
+                                <div class="form__group d-flex justify-content-between align-items-center">
+                                    <div class="input__group">
+                                        <input type="radio" checked="checked" class="radio">  Credit Card <i class='bx bxs-down-arrow'></i>
+                                    </div>
+                                    <div class="checkout__payment__methods">
+                                        <img src="../../assets/img/icons8-amex-48.png" alt="">
+                                        <img src="../../assets/img/icons8-mastercard-logo-48.png" alt="">
+                                        <img src="../../assets/img/icons8-visa-48.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="form__group">
+                                    <label for="">Card Number <span class="text-danger">*</span></label>
+                                <input type="tel" placeholder="1234567890987654" pattern="[0-9]{16}" required>
+                                </div>
+                                <div class="form__group d-flex justify-content-between gap-4">
+                                    <div class="input__group">
+                                        <label for="">Expiry Date <span class="text-danger">*</span></label>
+                                        <input type="text" placeholder="MM/YY" pattern="(0[1-9]|1[0-2])\/([2-9][0-9])" required>
+                                    </div>
+                                    <div class="input__group">
+                                        <label for="">CVC/CVV <span class="text-danger">*</span></label>
+                                        <input type="text" placeholder="123" pattern="[0-9]{3}"  required>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="submit" class="pay__btn btn btn-dark w-100 mt-3">Pay</button>
+                    </form>
+                </div>
+
+                <div class="order__summary__content__container col-lg-4">
+                    <h2>Order Summary</h2>
+                    <div class="payment__content__info">
+                        <!-- <div class="payment__item d-flex justify-content-between mt-4 border-bottom border-black">
+                            <div class="left d-flex">
+                                <img src="../../assets/img/watch9.png" alt="" class="payment__img mb-3">
+                                <div class="payment__item">
+                                    <p class="mb-0">Onyx Prime</p>
+                                    <p class="mb-0">Size: M</p>
+                                    <p class="mb-0">Quantity: 1</p>
+                                </div>
+                            </div>
+                            <div class="right">
+                                <p>$10,789</p>
+                            </div>
+                        </div> -->
+                    </div>
+
+
+
+
+                    <div class="summary__item d-flex justify-content-between mt-3">
+                        <p>Subtotal:</p>
+                        <p class="subtotal">$0</p>
+                    </div>
+                    <div class="summary__item d-flex justify-content-between">
+                        <p>Shipping:</p>
+                        <p class="shipping">$0</p>
+                    </div>
+                    <div class="summary__item d-flex justify-content-between">
+                        <p>Taxes (8%):</p>
+                        <p class="taxes">$0</p>
+                    </div>
+                    <div class="summary__total d-flex justify-content-between border-top border-black">
+                        <div class="mt-3"><strong>Total:</strong></div>
+                        <div class="mt-3 final__total__price">$0</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container footer__container">
+            <div class="row">
+                <div class="col-lg-6 col-md-12">
+                    <div class="newsletter__details">
+                        <h5>Stay in the Loop—Join Our Exclusive List</h5>
+                        <p>Be the first to know about new arrivals, exclusive deals, and timeless collections. Subscribe to our newsletter and never miss a moment.</p>
+                        <label class="d-flex align-items-center">
+                            <input type="email" placeholder="Enter your email" required>
+                            <button type="submit"><i class='bx bx-right-arrow-alt'></i></button>
+                        </label>
+                    </div>
+                    <ul class="footer__icons list-unstyled mt-3 d-flex">
+                        <li class="footer__item ms-0">
+                            <a href="#" class="footer__link text-decoration-none"><i class='bx bxl-instagram'></i></a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="#" class="footer__link text-decoration-none"><i class='bx bxl-facebook'></i></a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="#" class="footer__link text-decoration-none"><i class='bx bxl-twitter'></i></a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="#" class="footer__link text-decoration-none"><i class='bx bxl-pinterest'></i></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-4">
+                    <h5>Shop</h5>
+                    <ul class="list-unstyled">
+                        <li class="footer__item">
+                            <a href="#" class="footer__link text-decoration-none">All</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="#" class="footer__link text-decoration-none">New</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="#" class="footer__link text-decoration-none">Best Sellers</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="#" class="footer__link text-decoration-none">Women's Watches</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="#" class="footer__link text-decoration-none">Men's Watches</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-4">
+                    <h5>Information</h5>
+                    <ul class="list-unstyled">
+                        <li class="footer__item">
+                            <a href="#" class="footer__link text-decoration-none">About Us</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="#" class="footer__link text-decoration-none">Contact Us</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="#" class="footer__link text-decoration-none">Shipping & Returns</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="#" class="footer__link text-decoration-none">FAQs</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-4">
+                    <h5>Legal</h5>
+                    <ul class="list-unstyled">
+                        <li class="footer__item">
+                            <a href="#" class="footer__link text-decoration-none">Privacy Policy</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="#" class="footer__link text-decoration-none">Conditions of Use</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="#" class="footer__link text-decoration-none">Cookie Notice</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="#" class="footer__link text-decoration-none">Terms of Use</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row border-top py-2 d-flex justify-content-between align-items-center">
+                <div class="col-auto">
+                    <small> &copy; 2025 Jennifer Cortez Herrera | Icons by <a target="_blank" href="https://icons8.com">Icons8</a></small>
+                </div>
+                <div class="payment__methods col-auto">
+                    <img src="../../assets/img/icons8-amex-48.png" alt="" class="ms-0">
+                    <img src="../../assets/img/icons8-apple-pay-48.png" alt="">
+                    <img src="../../assets/img/icons8-google-pay-48.png" alt="">
+                    <img src="../../assets/img/icons8-mastercard-logo-48.png" alt="">
+                    <img src="../../assets/img/icons8-paypal-48.png" alt="">
+                    <img src="../../assets/img/icons8-visa-48.png" alt="" class="ms-0">
+                </div>
+            </div>
+        </div>
+    </footer>
+
+     <!-- CART MENU -->
+    <div class="cart mt-5">
+        <h2 class="text-center">Your Bag</h2>
+        <div class="cart__content d-flex flex-column row-gap-4">
+           
+        </div>
+        <div class="cart__total d-flex justify-content-between  border-top mt-5">
+            <div class="mt-3"><strong>Total:</strong></div>
+            <div class="mt-3 total__price">$0</div>
+        </div>
+    
+        <a href="#" class="cart__btn text-decoration-none btn btn-dark w-100 mt-3 mb-4">View Cart</a>
+        <i class='bx bx-x close__cart fs-3'></i>
+    </div>
+
+    <script src="../js/index.js"></script>
+    <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

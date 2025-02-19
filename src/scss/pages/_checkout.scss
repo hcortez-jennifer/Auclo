@@ -1,0 +1,55 @@
+.num__items{
+    font-size: 1.2rem;
+    font-weight: normal;
+}
+
+.checkout__content{
+    @media (max-width: 767px) {
+        flex-direction: column;
+    }
+}
+
+.checkout__content__container{
+    .checkout__categories p{
+        &:nth-of-type(2){
+            @media (max-width: 479px) {
+                display: none;
+            }
+        }
+    }
+
+    .checkout__item{
+        .checkout__img__container{
+            background-color: var(--secondary-clr);
+            border-radius: 12px;
+    
+            .checkout__img{
+                max-width: 150px;
+                height: auto;
+            }
+        }
+    
+        h4{
+            font-family: "Ibarra Real Nova", serif;
+        }
+
+        .right{
+            @media (max-width: 479px) {
+                display: none;
+            }
+        }
+
+        .remove__item{
+            cursor: pointer;
+        }
+    }
+}
+
+.order__summary__content__container{
+    background-color: #ccc;
+    padding: 2em;
+
+    @media (max-width: 767px) {
+        margin-top: 3em;
+    }
+}
