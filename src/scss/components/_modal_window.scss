@@ -42,7 +42,7 @@
     s{
         color: var(--grey-clr);
     }
-    
+
     .product__modal__window__price{
         color: var(--primary-dark-clr);
         font-weight: 700;
@@ -73,6 +73,12 @@
         background: #f8f8f8;
         text-align: center;
         cursor: pointer;
+
+        &.active {
+            background: black;
+            color: white;
+            border: 1px solid black;
+        }
     }
 }
 
