@@ -84,42 +84,36 @@
 }
 
 // ========== ABOUT SECTION ==========
-.about {
-    background-color: var(--black-clr);
+.about{
+    background-image: linear-gradient(rgba(4, 9, 30, 0.5), rgba(4, 9, 30, 0.9)), url('../../assets/img/about.jpg');
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
 
     .about__content {
+        max-width: 50%;
+        min-height: 65vh;
         @include a.centerPage;
-        flex-direction: column; 
-        position: relative;
-    }
-
-    .about__info {
-        position: absolute;
-        width: 40%;
-        top: 50%;
-        left: 10%;
-        transform: translateY(-50%);
         color: var(--white-clr);
-        background: rgba(0, 0, 0, 0.6);
-        padding: 2.5em;
-        border-radius: 12px;
-        
-        h2{
-            color: var(--primary-dark-clr);
-            margin-bottom: .5em;
+        position: relative;
+
+        @media (max-width: 991px) {
+            max-width: 70%;
         }
 
-        @media (max-width: 992px) {
-            width: 60%;
-            left: 0;
+        @media (max-width: 567px) {
+            max-width: 100%;
         }
 
-        @media (max-width: 767px) {
-            position: relative;
-            width: 90%;
-            left: 0;
-            top: auto;
-            transform: none;
+        .about__info{
+            background: rgba(0, 0, 0, 0.6);
+            padding: 2.5em;
+            border-radius: 12px;
+
+            h2{
+                color: var(--primary-dark-clr);
+                margin-bottom: .5em;
+            }
         }
     }
 }

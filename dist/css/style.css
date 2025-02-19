@@ -12426,44 +12426,38 @@ h5 {
 }
 
 .about {
-  background-color: var(--black-clr);
+  background-image: linear-gradient(rgba(4, 9, 30, 0.5), rgba(4, 9, 30, 0.9)), url("../../assets/img/about.jpg");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
 }
 .about .about__content {
+  max-width: 50%;
+  min-height: 65vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
+  color: var(--white-clr);
   position: relative;
 }
-.about .about__info {
-  position: absolute;
-  width: 40%;
-  top: 50%;
-  left: 10%;
-  transform: translateY(-50%);
-  color: var(--white-clr);
+@media (max-width: 991px) {
+  .about .about__content {
+    max-width: 70%;
+  }
+}
+@media (max-width: 567px) {
+  .about .about__content {
+    max-width: 100%;
+  }
+}
+.about .about__content .about__info {
   background: rgba(0, 0, 0, 0.6);
   padding: 2.5em;
   border-radius: 12px;
 }
-.about .about__info h2 {
+.about .about__content .about__info h2 {
   color: var(--primary-dark-clr);
   margin-bottom: 0.5em;
-}
-@media (max-width: 992px) {
-  .about .about__info {
-    width: 60%;
-    left: 0;
-  }
-}
-@media (max-width: 767px) {
-  .about .about__info {
-    position: relative;
-    width: 90%;
-    left: 0;
-    top: auto;
-    transform: none;
-  }
 }
 
 .best__sellers .product__card {
