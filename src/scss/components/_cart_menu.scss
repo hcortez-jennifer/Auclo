@@ -18,12 +18,12 @@
     }
 }
 
-.cart__img {
+.cart__img{
     max-width: 100px; 
     height: auto;
 }
 
-.cart__details {
+.cart__details{
     flex-grow: 1;
 
     h4{
@@ -31,7 +31,7 @@
     }
 }
 
-.cart__quantity button{
+.cart__quantity button, .checkout__quantity button{
     width: 30px;
     height: 30px;
     border: none;
@@ -39,7 +39,7 @@
     cursor: pointer;
 }
 
-.cart__total{
+.cart__total, .summary__total{
     font-weight: bold;
     font-size: 1.2rem;
 }

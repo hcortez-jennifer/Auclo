@@ -11953,7 +11953,7 @@ h5 {
   font-family: "Ibarra Real Nova", serif;
 }
 
-.cart__quantity button {
+.cart__quantity button, .checkout__quantity button {
   width: 30px;
   height: 30px;
   border: none;
@@ -11961,7 +11961,7 @@ h5 {
   cursor: pointer;
 }
 
-.cart__total {
+.cart__total, .summary__total {
   font-weight: bold;
   font-size: 1.2rem;
 }
@@ -12544,6 +12544,52 @@ h5 {
   background-color: var(--black-clr);
   color: var(--white-clr);
   border-color: var(--black-clr);
+}
+
+.num__items {
+  font-size: 1.2rem;
+  font-weight: normal;
+}
+
+@media (max-width: 767px) {
+  .checkout__content {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 479px) {
+  .checkout__content__container .checkout__categories p:nth-of-type(2) {
+    display: none;
+  }
+}
+.checkout__content__container .checkout__item .checkout__img__container {
+  background-color: var(--secondary-clr);
+  border-radius: 12px;
+}
+.checkout__content__container .checkout__item .checkout__img__container .checkout__img {
+  max-width: 150px;
+  height: auto;
+}
+.checkout__content__container .checkout__item h4 {
+  font-family: "Ibarra Real Nova", serif;
+}
+@media (max-width: 479px) {
+  .checkout__content__container .checkout__item .right {
+    display: none;
+  }
+}
+.checkout__content__container .checkout__item .remove__item {
+  cursor: pointer;
+}
+
+.order__summary__content__container {
+  background-color: #ccc;
+  padding: 2em;
+}
+@media (max-width: 767px) {
+  .order__summary__content__container {
+    margin-top: 3em;
+  }
 }
 
 .sign__in__form button {

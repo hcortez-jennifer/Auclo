@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign In | Auclo</title>
+    <title>Checkout | Auclo</title>
     <link rel="stylesheet" href="../../dist/css/style.css">
-    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
-    <link rel="stylesheet" type="text/css" href="../../dist/css/lightslider.css">
+    <link rel="stylesheet"
+  href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" type="text/css" href="../../dist/css/style.css">
     <script type="text/javascript" src="../js/Jquery.js"></script>
     <script type="text/javascript" src="../js/lightslider.js"></script>
 </head>
@@ -32,7 +33,7 @@
                     <ul class="navbar-nav mx-auto">
                         <li class="nav-item"><a href="../../index.html" class="nav-link">Home</a></li>
                         <li class="nav-item dropdown">
-                            <a href="#" class="nav-link" data-bs-toggle="dropdown">Watches <i class='bx bxs-down-arrow'></i></a>
+                            <a href="#" class="nav-link active" data-bs-toggle="dropdown">Watches <i class='bx bxs-down-arrow'></i></a>
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" href="#">New Arrivals</a></li>
                                 <li><a class="dropdown-item" href="#">Best Sellers</a></li>
@@ -65,44 +66,45 @@
                         </div>
                     </li>
                     <li class="nav-item"><a href="#" class="nav-link"><i class='bx bx-heart'></i></a></li>
-                    <li class="nav-item"><a href="#" class="nav-link"><i class='bx bx-user'></i></a></li>
+                    <li class="nav-item"><a href="sign_in.html" class="nav-link"><i class='bx bx-user'></i></a></li>
                 </ul>
             </div>
         </nav>
     </header>
 
-    <section class="sign__in">
-        <div class="container sign__in__container">
-            <div class="sign__in__content">
-                <div class="row d-flex justify-content-between align-items-center mt-5 gap-5">
-                    <div class="col-lg-5 sign__in__form">
-                        <h2 class="mb-3">Sign in</h2>
-                        <div class="inputs">
-                            <label class="mb-3"><input type="email" placeholder="Enter your email" required></label>
-                            <label><input type="password" placeholder="Enter your password" required></label>
-                        </div>
-                        <button type="submit" class="btn btn-dark w-100 mt-5">Sign in</button>
-                        <div class="d-flex justify-content-between mt-3">
-                            <div>
-                                <input type="checkbox" id="check-password" class="me-1">
-                                <label for="check-password" class="text">Remember me</label>
-                            </div>
-                            <a href="#">Forgot password?</a>  
-                        </div>
+    <section class="checkout">
+        <div class="container checkout__container">
+            <div class="checkout__content d-flex justify-content-between">
+                <div class="checkout__content__container col-lg-8">
+                    <h2>Your Bag <span class="num__items">(<span class="cart__count">0</span> items)</span></h2>
+                    <div class="checkout__categories d-flex justify-content-between border-top border-bottom">
+                        <p class="my-2">Products</p>
+                        <p class="my-2">Total Price</p>
                     </div>
-                    <div class="col-lg-6 new__account__form">
-                        <h2>New Customer?</h2>
-                        <p>Create an account with us and enjoy exclusive benefits!</p>
-                        <ul>
-                            <li>Faster Checkout – Save your details for a seamless shopping experience.</li>
-                            <li>Exclusive Offers – Get early access to sales, promotions, and special discounts.</li>
-                            <li>Order Tracking – Easily track your orders and view purchase history.</li>
-                            <li>Personalized Recommendations – Discover watches that match your style.</li>
-                            <li>Wishlist & Favorites – Save your favorite timepieces for later.</li>
-                            <li>Hassle-Free Returns – Enjoy a smooth return and exchange process.</li>
-                        </ul>
-                        <a href="#" class="btn btn-dark w-100 text-decoration-none mt-4">Create an account</a>
+                    <div class="checkout__content__info">
+                        
                     </div>
+                </div>
+
+                <div class="order__summary__content__container">
+                    <h2>Order Summary</h2>
+                    <div class="summary__item d-flex justify-content-between mt-3">
+                        <p>Subtotal:</p>
+                        <p class="subtotal">$0</p>
+                    </div>
+                    <div class="summary__item d-flex justify-content-between">
+                        <p>Shipping:</p>
+                        <p class="shipping">$0</p>
+                    </div>
+                    <div class="summary__item d-flex justify-content-between">
+                        <p>Taxes (8%):</p>
+                        <p class="taxes">$0</p>
+                    </div>
+                    <div class="summary__total d-flex justify-content-between border-top border-black">
+                        <div class="mt-3"><strong>Total:</strong></div>
+                        <div class="mt-3 final__total__price">$0</div>
+                    </div>
+                    <button class="btn btn-dark w-100 mt-3">Proceed to Checkout</button>
                 </div>
             </div>
         </div>
@@ -116,7 +118,7 @@
                         <h5>Stay in the Loop—Join Our Exclusive List</h5>
                         <p>Be the first to know about new arrivals, exclusive deals, and timeless collections. Subscribe to our newsletter and never miss a moment.</p>
                         <label class="d-flex align-items-center">
-                            <input type="email" placeholder="Enter your email">
+                            <input type="email" placeholder="Enter your email" required>
                             <button type="submit"><i class='bx bx-right-arrow-alt'></i></button>
                         </label>
                     </div>
@@ -205,8 +207,8 @@
             </div>
         </div>
     </footer>
-    
-    <!-- CART MENU -->
+
+     <!-- CART MENU -->
     <div class="cart mt-5">
         <h2 class="text-center">Your Bag</h2>
         <div class="cart__content d-flex flex-column row-gap-4">
@@ -217,7 +219,7 @@
             <div class="mt-3 total__price">$0</div>
         </div>
     
-        <a href="checkout.html" class="cart__btn text-decoration-none btn btn-dark w-100 mt-3 mb-4">View Cart</a>
+        <a href="#" class="cart__btn text-decoration-none btn btn-dark w-100 mt-3 mb-4">View Cart</a>
         <i class='bx bx-x close__cart fs-3'></i>
     </div>
 

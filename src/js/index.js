@@ -277,3 +277,92 @@ document.addEventListener("DOMContentLoaded", () => {
 
     updateCart();
 });
+
+
+// CHECKOUT
+document.addEventListener("DOMContentLoaded", () => {
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    const checkoutContainer = document.querySelector(".checkout__content__info");
+    const cartCount = document.querySelector(".cart__count");
+    const subtotalElement = document.querySelector(".subtotal");
+    const shippingElement = document.querySelector(".shipping");
+    const taxesElement = document.querySelector(".taxes");
+    const finalTotalPriceElement = document.querySelector(".final__total__price");
+
+    function updateCheckout() {
+        checkoutContainer.innerHTML = "";
+        let subtotal = 0;
+        let totalItems = 0;
+
+        cart.forEach((item, index) => {
+            const itemTotal = item.price * item.quantity; 
+            subtotal += itemTotal;
+            totalItems += item.quantity;
+            item.itemNumber = `#${1000 + index}`; 
+
+            const checkoutItem = document.createElement("div");
+            checkoutItem.classList.add("checkout__item", "d-flex", "justify-content-between", "mt-3", "border-bottom");
+
+            checkoutItem.innerHTML = `
+                <div class="left d-flex align-items-center gap-3">
+                    <div class="checkout__img__container mb-3">
+                        <img src="${item.image}" class="checkout__img img__fluid" alt="">
+                    </div>
+                    <div class="checkout__details">
+                        <h4 class="mb-1">${item.name}</h4>
+                        <p class="text-muted">Item No: ${item.itemNumber}</p>
+                        <p class="text-muted">$${item.price.toLocaleString("en-US", { minimumFractionDigits: 2 })}</p>
+                        <p class="mb-1">Size: ${item.size}</p>
+                        <div class="checkout__quantity d-flex align-items-center">
+                            <p class="mb-0 me-2">Quantity:</p>
+                            <button class="decrement btn btn-outline-dark btn-sm" data-index="${index}">-</button>
+                            <span class="number mx-2">${item.quantity}</span>
+                            <button class="increment btn btn-outline-dark btn-sm" data-index="${index}">+</button>
+                        </div>
+                        <div class="remove__item d-flex mt-4" data-index="${index}">
+                            <i class='bx bx-trash text-danger me-1'></i>
+                            <p>Remove</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="right">
+                    <p class="total__item__price mt-2"><strong>$${itemTotal.toLocaleString("en-US", { minimumFractionDigits: 2 })}</strong></p>
+                </div>
+            `;
+            checkoutContainer.appendChild(checkoutItem);
+        });
+
+        cartCount.textContent = totalItems;
+        subtotalElement.textContent = `$${subtotal.toLocaleString("en-US", { minimumFractionDigits: 2 })}`;
+
+        let shipping = subtotal >= 7500 ? 0 : 50;
+        shippingElement.textContent = shipping === 0 ? "Free" : `$${shipping}`;
+
+        let taxes = subtotal * 0.08; 
+        taxesElement.textContent = `$${taxes.toLocaleString("en-US", { minimumFractionDigits: 2 })}`;
+
+        let finalTotal = subtotal + shipping + taxes;
+        finalTotalPriceElement.textContent = `$${finalTotal.toLocaleString("en-US", { minimumFractionDigits: 2 })}`;
+
+        localStorage.setItem("cart", JSON.stringify(cart));
+    }
+
+    checkoutContainer.addEventListener("click", (e) => {
+        const index = e.target.getAttribute("data-index");
+
+        if (e.target.classList.contains("increment")) {
+            cart[index].quantity++;
+        } else if (e.target.classList.contains("decrement")) {
+            cart[index].quantity--;
+            if (cart[index].quantity === 0) {
+                cart.splice(index, 1);
+            }
+        } else if (e.target.closest(".remove__item")) { 
+            cart.splice(index, 1);
+        }
+
+        updateCheckout();
+    });
+
+    updateCheckout();
+});
