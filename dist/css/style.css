@@ -11941,7 +11941,7 @@ h5 {
   right: 0;
 }
 
-.cart__img {
+.cart__img, .payment__img {
   max-width: 100px;
   height: auto;
 }
@@ -12335,7 +12335,7 @@ h5 {
 .hero {
   width: 100%;
   height: 100vh;
-  background-image: url("../../assets/img/hero_bg.png");
+  background-image: url("../../assets/img/hero_bg.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: left 50%;
@@ -12357,29 +12357,19 @@ h5 {
   }
 }
 
-.hero__container {
-  margin-top: 3em;
-}
-
 .hero__content {
   max-width: 50%;
   color: white;
 }
 @media (max-width: 565px) {
   .hero__content {
-    max-width: 80%;
-    margin-top: 27em;
-  }
-}
-@media (max-width: 500px) {
-  .hero__content {
     max-width: 100%;
-    margin-top: 25em;
+    margin-top: 20em;
   }
 }
 .hero__content h1 {
   font-family: "Ibarra Real Nova", serif;
-  line-height: 1.2;
+  line-height: 1.1;
   margin-bottom: 0.3em;
 }
 @media (max-width: 565px) {
@@ -12590,6 +12580,25 @@ h5 {
   .order__summary__content__container {
     margin-top: 3em;
   }
+}
+
+@media (max-width: 767px) {
+  .payment__content {
+    flex-direction: column;
+  }
+}
+
+.checkout__form .form__group {
+  margin-bottom: 1em;
+}
+.checkout__form input:not(.radio) {
+  width: 100%;
+  margin-top: 0.5em;
+  padding: 0.5em;
+  outline: none;
+}
+.checkout__form .payment__container .bxs-down-arrow {
+  font-size: 0.75rem;
 }
 
 .sign__in__form button {

@@ -5,7 +5,7 @@
 .hero{
     width: 100%;
     height: 100vh;
-    background-image: url("../../assets/img/hero_bg.png");
+    background-image: url("../../assets/img/hero_bg.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: left 50%;
@@ -23,27 +23,18 @@
     }
 }
 
-.hero__container{
-    margin-top: 3em;
-}
-
 .hero__content{
     max-width: 50%;
     color: white;
 
     @media (max-width: 565px) {
-        max-width: 80%;
-        margin-top: 27em;
-    }
-
-    @media (max-width: 500px) {
         max-width: 100%;
-        margin-top: 25em;
+        margin-top: 20em;
     }
 
     h1{
         font-family: "Ibarra Real Nova", serif;
-        line-height: 1.2;
+        line-height: 1.1;
         margin-bottom: .3em;
     }
 

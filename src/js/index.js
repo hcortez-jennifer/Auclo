@@ -366,3 +366,89 @@ document.addEventListener("DOMContentLoaded", () => {
 
     updateCheckout();
 });
+
+
+// ORDER SUMMARY
+document.addEventListener("DOMContentLoaded", () => {
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    const paymentContainer = document.querySelector(".payment__content__info");
+    const subtotalElement = document.querySelector(".subtotal");
+    const shippingElement = document.querySelector(".shipping");
+    const taxesElement = document.querySelector(".taxes");
+    const finalTotalPriceElement = document.querySelector(".final__total__price");
+    const cartCount = document.querySelector(".badge"); // Navbar cart count
+
+    function updatePaymentSummary() {
+        paymentContainer.innerHTML = "";
+        let subtotal = 0;
+
+        cart.forEach((item) => {
+            const itemTotal = item.price * item.quantity;
+            subtotal += itemTotal;
+
+            const paymentItem = document.createElement("div");
+            paymentItem.classList.add("payment__item", "d-flex", "justify-content-between", "mt-4", "border-bottom", "border-black");
+
+            paymentItem.innerHTML = `
+                <div class="left d-flex">
+                    <img src="${item.image}" alt="" class="payment__img mb-3">
+                    <div class="payment__item">
+                        <p class="mb-0">${item.name}</p>
+                        <p class="mb-0">Size: ${item.size}</p>
+                        <p class="mb-0">Quantity: ${item.quantity}</p>
+                    </div>
+                </div>
+                <div class="right">
+                    <p>$${itemTotal.toLocaleString("en-US", { minimumFractionDigits: 2 })}</p>
+                </div>
+            `;
+            paymentContainer.appendChild(paymentItem);
+        });
+
+        // Update price summary
+        subtotalElement.textContent = `$${subtotal.toLocaleString("en-US", { minimumFractionDigits: 2 })}`;
+       
+        let shipping = subtotal >= 7500 ? 0 : 50;
+        shippingElement.textContent = shipping === 0 ? "Free" : `$${shipping}`;
+
+        let taxes = subtotal * 0.08;
+        taxesElement.textContent = `$${taxes.toLocaleString("en-US", { minimumFractionDigits: 2 })}`;
+       
+        let finalTotal = subtotal + shipping + taxes;
+        finalTotalPriceElement.textContent = `$${finalTotal.toLocaleString("en-US", { minimumFractionDigits: 2 })}`;
+    }
+
+    updatePaymentSummary();
+});
+
+
+// UPDATE CART BADGE
+document.addEventListener("DOMContentLoaded", () => {
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    const cartCount = document.querySelector(".badge"); // Navbar cart count
+    const checkoutForm = document.querySelector(".checkout__form");
+
+    function resetCart() {
+        localStorage.removeItem("cart"); // Clear cart from localStorage
+        cartCount.textContent = "0"; // Reset badge count
+    }
+
+    checkoutForm.addEventListener("submit", (e) => {
+        e.preventDefault(); // Prevent default form submission
+
+        // Only proceed if the form is valid
+        if (checkoutForm.checkValidity()) {
+            resetCart();
+            checkoutForm.submit(); // Proceed with form submission to confirmation.html
+        } else {
+            checkoutForm.reportValidity(); // Show validation errors
+        }
+    });
+
+    function updateCartBadge() {
+        let totalItems = cart.reduce((acc, item) => acc + item.quantity, 0);
+        cartCount.textContent = totalItems;
+    }
+
+    updateCartBadge();
+});
